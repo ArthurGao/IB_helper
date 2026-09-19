@@ -1,0 +1,68 @@
+{
+  "lastVerified": "2026-09-20",
+  "sourceUrl": "https://www.ibo.org/programmes/diploma-programme/curriculum/",
+  "_verify": {
+    "status": "unverified",
+    "sourceUrl": "https://www.ibo.org/programmes/diploma-programme/curriculum/",
+    "note": {
+      "en": "TODO verify: group names and example subjects seeded from spec section 9.1; confirm against the current IB DP curriculum page.",
+      "zh": "待核实：学科组名称与代表科目来自规格第 9.1 节；请对照 IB 官方 DP 课程页面确认。"
+    }
+  },
+  "groups": [
+    {
+      "id": 1,
+      "name": { "en": "Studies in Language & Literature", "zh": "语言与文学" },
+      "description": {
+        "en": "The student's best language: literature, or language and literature.",
+        "zh": "学生的最强语言：文学，或语言与文学。"
+      },
+      "exampleSubjectCodes": ["lang-a-lit-en", "lang-a-langlit-en", "lang-a-lit-zh", "lang-a-langlit-zh"]
+    },
+    {
+      "id": 2,
+      "name": { "en": "Language Acquisition", "zh": "语言习得" },
+      "description": {
+        "en": "An additional language: Language B, or ab initio for beginners.",
+        "zh": "第二语言：Language B，或零起点的 ab initio。"
+      },
+      "exampleSubjectCodes": ["english-b", "mandarin-b", "spanish-b", "french-b", "language-ab-initio"]
+    },
+    {
+      "id": 3,
+      "name": { "en": "Individuals & Societies", "zh": "个人与社会" },
+      "description": {
+        "en": "Human behaviour, society, economy and history.",
+        "zh": "人类行为、社会、经济与历史。"
+      },
+      "exampleSubjectCodes": ["history", "economics", "geography", "psychology", "business-management", "digital-society"]
+    },
+    {
+      "id": 4,
+      "name": { "en": "Sciences", "zh": "科学" },
+      "description": {
+        "en": "Experimental sciences and computer science.",
+        "zh": "实验科学与计算机科学。"
+      },
+      "exampleSubjectCodes": ["physics", "chemistry", "biology", "computer-science", "design-technology", "ess", "sehs"]
+    },
+    {
+      "id": 5,
+      "name": { "en": "Mathematics", "zh": "数学" },
+      "description": {
+        "en": "Mathematics: Analysis & Approaches (AA) or Applications & Interpretation (AI).",
+        "zh": "数学：分析与方法（AA）或应用与解释（AI）。"
+      },
+      "exampleSubjectCodes": ["math-aa", "math-ai"]
+    },
+    {
+      "id": 6,
+      "name": { "en": "The Arts", "zh": "艺术" },
+      "description": {
+        "en": "Visual arts, music, theatre, dance, film. May be replaced by a second subject from groups 1-4.",
+        "zh": "视觉艺术、音乐、戏剧、舞蹈、电影。可用 Group 1–4 的第二门科目替换。"
+      },
+      "exampleSubjectCodes": ["visual-arts", "music", "theatre", "dance", "film"]
+    }
+  ]
+}

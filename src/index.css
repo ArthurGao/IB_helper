@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+/* 深浅色用 data-theme 属性驱动（而非 prefers-color-scheme 单独判断），
+   这样「跟随系统 / 手动切换」两种来源可以统一成一个属性。 */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+:root {
+  --color-surface: #f8fafc;
+  --color-surface-raised: #ffffff;
+  --color-border: #e2e8f0;
+  --color-ink: #0f172a;
+  --color-ink-muted: #475569;
+  --color-brand: #1d4ed8;
+  --color-brand-ink: #ffffff;
+  /* 语义色：绿=满足 琥珀=注意 红=不合法。UI 上必须同时配图标/文字，不能只靠颜色。 */
+  --color-ok: #15803d;
+  --color-warn: #b45309;
+  --color-danger: #b91c1c;
+}
+
+[data-theme='dark'] {
+  --color-surface: #0b1120;
+  --color-surface-raised: #111c31;
+  --color-border: #1e293b;
+  --color-ink: #e2e8f0;
+  --color-ink-muted: #94a3b8;
+  --color-brand: #60a5fa;
+  --color-brand-ink: #0b1120;
+  --color-ok: #4ade80;
+  --color-warn: #fbbf24;
+  --color-danger: #f87171;
+}
+
+@theme inline {
+  --color-surface: var(--color-surface);
+  --color-surface-raised: var(--color-surface-raised);
+  --color-border: var(--color-border);
+  --color-ink: var(--color-ink);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-brand: var(--color-brand);
+  --color-brand-ink: var(--color-brand-ink);
+  --color-ok: var(--color-ok);
+  --color-warn: var(--color-warn);
+  --color-danger: var(--color-danger);
+}
+
+html {
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
