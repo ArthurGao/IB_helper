@@ -4,24 +4,40 @@
 
 完整需求见 [`IB-Course-Selector-Spec.md`](./IB-Course-Selector-Spec.md)；每轮工作约定见 [`CLAUDE.md`](./CLAUDE.md)。
 
+## 目录结构
+
+```
+.
+├── frontend/   # 全部前端代码（Vite + React 18 + TS + Tailwind v4 + Vitest）
+├── backend/    # 预留，目前只有 README —— v1 不需要后端
+├── package.json  # 根级脚本，代理到 frontend
+└── vercel.json   # 根级构建配置，产物为 frontend/dist
+```
+
+知识库（已核实的 IB 事实、架构决策、未决问题）：`~/Docs/Knowledgebase/IB_helper/`
+
 ## 命令
 
+根目录执行即可，会自动代理到 `frontend/`：
+
 ```bash
-npm run dev        # 本地开发
+npm run dev        # 本地开发（-- --host 可让手机在同一 Wi-Fi 访问）
 npm run build      # tsc -b && vite build
 npm run typecheck  # tsc -b
 npm run lint       # oxlint（typescript/no-explicit-any = error）
 npm run test       # vitest run
+npm run verify     # 以上四项串起来跑
 ```
 
 ## 进度
 
 - [x] **M1 骨架**：Vite + React 18 + TS(strict) + Tailwind v4 + react-router-dom + react-i18next；中/英一键切换、深/浅色切换，均持久化到 localStorage。
-- [x] **M2 数据**：规格第 8 节类型落地为 `src/types/ib.ts`；第 9 节种子数据落地为 `src/data/*.json`（双语字段 + `lastVerified` + `sourceUrl`）。
-- [x] **M3 规则引擎**：`src/lib/ib-rules/` 五个纯函数 + Vitest。
+- [x] **M2 数据**：规格第 8 节类型落地为 `frontend/src/types/ib.ts`；第 9 节种子数据落地为 `frontend/src/data/*.json`（双语字段 + `lastVerified` + `sourceUrl`）。
+- [x] **M3 规则引擎**：`frontend/src/lib/ib-rules/` 五个纯函数 + Vitest。
 - [x] **M4 选课向导**：/selector Step 1–3（背景输入、逐组选课含 Group 6 替换、实时校验 + 警告 + 方向匹配 + NZ UE）。
 - [x] **M5 模拟器与结果**：Step 4–5（保底/冲刺两档预估、失败条件逐条亮灯、方案卡）+ 保存 / 对比 / 打印 / URL 分享。
 - [x] **M6 内容页**：/learn（9→12 时间线、六组卡片、Core、评分）、/learn/considerations（可搜索卡片）、/nz（UE、8 所大学、学校筛选）、/updates（按入学年份判新旧大纲）、/glossary（术语 + 家长 FAQ）。
+- [x] **重构**（2026-09-21）：代码移入 `frontend/`，新增 `backend/` 占位，根级脚本与 Vercel 配置更新。
 - [x] **M7 打磨**：打印样式、跳转链接与 focus-visible、语义色 + 图标 + 文字三重表达、移动优先布局、常驻免责声明、本地埋点。
 
 当前共 175 个测试（`npm run test`），typecheck / lint / build 均 0 退出码。
@@ -38,6 +54,12 @@ npm run test       # vitest run
 ## 考试 session（影响新旧大纲判定）
 
 IB 有 5 月与 11 月两个 session：北半球通常 5 月（入学年 + 2），新西兰学校通常在 Year 13 的 11 月（入学年 + 1）。差这一年会把新旧大纲判反，因此 session 由用户在 Step 1 或 /updates 选择，**不做推测**；未选择时 `/updates` 显示「请填入年份并选择 session」而不是给结论。
+
+## 线上地址
+
+**https://ib-helper-gamma.vercel.app**（生产环境，公开可访问，手机直接打开即可）
+
+重新部署：`npx vercel --prod`。`vercel.json` 的 SPA rewrite 保证 `/selector`、`/nz` 等路由直接访问不会 404。
 
 ## 在手机上打开
 
@@ -80,11 +102,11 @@ JSON 不支持注释，因此每个待核实项用 `_verify` 字段承载 TODO �
 
 ## 评估入口只有一个
 
-`src/lib/evaluatePlan.ts` 的 `evaluatePlan(plan)` 是**唯一**的方案评估入口（纯函数，无 React 依赖），选课页经 `usePlanEvaluation` 包装使用，对比页直接调用。此前对比页自己拼了一份简化逻辑，导致同一方案在两页结论矛盾（对比页会给结构非法的方案算出总分）。总分统一经 `displayTotal()` 输出：`incomplete` 时返回 `null`，UI 显示 `—`。
+`frontend/src/lib/evaluatePlan.ts` 的 `evaluatePlan(plan)` 是**唯一**的方案评估入口（纯函数，无 React 依赖），选课页经 `usePlanEvaluation` 包装使用，对比页直接调用。此前对比页自己拼了一份简化逻辑，导致同一方案在两页结论矛盾（对比页会给结构非法的方案算出总分）。总分统一经 `displayTotal()` 输出：`incomplete` 时返回 `null`，UI 显示 `—`。
 
 ## 规则引擎
 
-`src/lib/ib-rules/`（纯函数、零 UI 依赖，数据可注入以便测试）：
+`frontend/src/lib/ib-rules/`（纯函数、零 UI 依赖，数据可注入以便测试）：
 
 | 函数 | 作用 |
 |---|---|
