@@ -16,6 +16,13 @@ export interface DiplomaInput {
   tok: CoreGrade
   ee: CoreGrade
   casComplete: boolean
+  /**
+   * 选课结构是否合法（validateStructure 的结果）。
+   * 官方失败条件以「合法的六门课组合」为前提：六门重复课、缺 Group 1、没有数学
+   * 这类组合即使分数够高也拿不到文凭，所以这里显式接收结构结论，
+   * 不传则只按科目数判断。
+   */
+  structureValid?: boolean
 }
 
 export interface DiplomaDeps {
@@ -143,7 +150,9 @@ export function evaluateDiploma(
   deps: DiplomaDeps = { rules: defaultRules, matrix: defaultMatrix },
 ): DiplomaResult {
   const { rules, matrix } = deps
-  const isComplete = input.grades.length === rules.requiredSubjectCount
+  const countOk = input.grades.length === rules.requiredSubjectCount
+  const structureOk = input.structureValid !== false
+  const isComplete = countOk && structureOk
 
   const hasN = input.grades.some((g) => g.grade === 'N')
   const subjectPoints = hasN ? null : numericGrades(input.grades).reduce((a, b) => a + b, 0)
@@ -175,8 +184,11 @@ export function evaluateDiploma(
         ? 'indeterminate'
         : 'pass'
 
+  const incompleteReason: DiplomaResult['incompleteReason'] = countOk ? 'structure' : 'subject-count'
+
   return {
     status,
+    ...(status === 'incomplete' ? { incompleteReason } : {}),
     passed: status === 'pass',
     conditions,
     subjectPoints,

@@ -27,12 +27,30 @@ export interface DataFileMeta {
   _verify?: VerifyNote
 }
 
+/**
+ * 某个考试年份区间内该科目提供的层级。
+ * 例：ESS 在 2026 年首次评估的新大纲才有 HL，旧大纲考生只能选 SL。
+ * `fromExamYear` / `throughExamYear` 均为闭区间，省略表示不设下/上界。
+ */
+export interface LevelAvailability {
+  levels: Level[]
+  fromExamYear?: number
+  throughExamYear?: number
+}
+
 export interface Subject {
   /** 本应用内部标识（非 IB 官方科目代码，避免凭记忆编造官方代码）。 */
   code: string
   name: L10n
   group: GroupId
+  /** 未指定考试年份时的层级（= 当前大纲）。 */
   levels: Level[]
+  /** 按考试年份变化的层级；给定考试年份时优先于 `levels`。 */
+  levelAvailability?: LevelAvailability[]
+  /** 该科目最后一次可考的年份（之后被新课程取代）。 */
+  availableThroughExamYear?: number
+  /** 该科目最早可考的年份。 */
+  availableFromExamYear?: number
   /** 跨学科科目，如 ESS = [3,4]、Literature and Performance = [1,6]。 */
   satisfiesGroups?: GroupId[]
   mathType?: MathType
@@ -186,6 +204,8 @@ export interface DiplomaResult {
    * 官方失败条件默认考生注册了 6 门课，拿 5 门课去套条件会得出「通过」这种荒谬结论。
    */
   status: 'pass' | 'fail' | 'indeterminate' | 'incomplete'
+  /** status 为 incomplete 时说明原因，便于 UI 给出准确文案。 */
+  incompleteReason?: 'subject-count' | 'structure'
   passed: boolean
   conditions: ConditionResult[]
   /** 6 门科目分之和（含 N 时为 null）。 */

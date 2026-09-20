@@ -2,9 +2,18 @@ import { useTranslation } from 'react-i18next'
 import type { CoreGrade, DiplomaResult, Plan, Scenario, Subject, SubjectGrade } from '../types/ib'
 import { useLocalized } from '../hooks/useLocalized'
 import { StatusPill, type Tone } from './StatusPill'
+import { displayTotal } from '../lib/evaluatePlan'
 
 const CORE_GRADES: CoreGrade[] = ['A', 'B', 'C', 'D', 'E', 'N']
 const SUBJECT_GRADES: SubjectGrade[] = [1, 2, 3, 4, 5, 6, 7, 'N']
+
+/** incomplete 有两种原因：没选满、或组合不合法——文案不同。 */
+function statusKey(result: DiplomaResult): string {
+  if (result.status === 'incomplete' && result.incompleteReason === 'structure') {
+    return 'step4.status.incomplete-structure'
+  }
+  return `step4.status.${result.status}`
+}
 
 const STATUS_TONE: Record<DiplomaResult['status'], Tone> = {
   pass: 'ok',
@@ -44,9 +53,9 @@ function TotalCard({
       <p className="text-xs font-medium uppercase tracking-wide text-ink-muted">
         {t(`step4.${scenario}`)}
       </p>
-      {/* 没选满 6 门时不显示总分：那个数字看起来像文凭分数，其实不是。 */}
+      {/* 没选满 6 门或结构非法时不显示总分：那个数字看起来像文凭分数，其实不是。 */}
       <p className="mt-1 text-2xl font-semibold text-ink">
-        {result.status === 'incomplete' ? '—' : (result.total ?? '—')}{' '}
+        {displayTotal(result) ?? '—'}{' '}
         <span className="text-base text-ink-muted">/ {result.max}</span>
       </p>
       <p className="mt-1 text-xs text-ink-muted">
@@ -57,7 +66,7 @@ function TotalCard({
       </p>
       <div className="mt-2">
         <StatusPill tone={STATUS_TONE[result.status]}>
-          {t(`step4.status.${result.status}`, {
+          {t(statusKey(result), {
             passMark,
             count: subjectCount,
             required: requiredSubjectCount,

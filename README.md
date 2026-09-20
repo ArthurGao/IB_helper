@@ -24,7 +24,16 @@ npm run test       # vitest run
 - [x] **M6 内容页**：/learn（9→12 时间线、六组卡片、Core、评分）、/learn/considerations（可搜索卡片）、/nz（UE、8 所大学、学校筛选）、/updates（按入学年份判新旧大纲）、/glossary（术语 + 家长 FAQ）。
 - [x] **M7 打磨**：打印样式、跳转链接与 focus-visible、语义色 + 图标 + 文字三重表达、移动优先布局、常驻免责声明、本地埋点。
 
-当前共 158 个测试（`npm run test`），typecheck / lint / build 均 0 退出码。
+当前共 175 个测试（`npm run test`），typecheck / lint / build 均 0 退出码。
+
+## 按考试年份变化的课程
+
+科目层级不是永久固定的，数据里用 `levelAvailability` / `availableThroughExamYear` 表达：
+
+- **ESS**：2026 年首次评估的新大纲才有 HL；考 2025 及更早的学生只能选 SL（选课器会禁用 HL 并说明原因）。
+- **World Religions**：仅 SL，最后可考 2028 年（2029 年起由 religion and society 取代，该新课程的层级官方尚未公布，因此暂不作为可选科目）。
+
+未填考试年份时回落到当前大纲，不做推测。
 
 ## 考试 session（影响新旧大纲判定）
 
@@ -69,14 +78,18 @@ JSON 不支持注释，因此每个待核实项用 `_verify` 字段承载 TODO �
 
 方向匹配刻意不使用 open / closed 措辞：状态是 `meets` / `partial` / `not-met`，表示与**通用选课建议**的符合程度，而非某所大学的录取判定（例如新西兰的医学是通过大学一年级课程入读，不是高中直申）。
 
+## 评估入口只有一个
+
+`src/lib/evaluatePlan.ts` 的 `evaluatePlan(plan)` 是**唯一**的方案评估入口（纯函数，无 React 依赖），选课页经 `usePlanEvaluation` 包装使用，对比页直接调用。此前对比页自己拼了一份简化逻辑，导致同一方案在两页结论矛盾（对比页会给结构非法的方案算出总分）。总分统一经 `displayTotal()` 输出：`incomplete` 时返回 `null`，UI 显示 `—`。
+
 ## 规则引擎
 
 `src/lib/ib-rules/`（纯函数、零 UI 依赖，数据可注入以便测试）：
 
 | 函数 | 作用 |
 |---|---|
-| `validateStructure` | 组覆盖、HL 3–4、一门数学、Group 6 替换、跨学科科目（ESS / Literature and Performance） |
-| `evaluateDiploma` | 逐条失败条件亮灯 + 总分 /45（阈值全部来自 `diploma-rules.json`）。科目数不等于 6 时返回 `incomplete` 并隐藏总分——官方条件以 6 门为前提，拿 5 门去套会算出「通过」；「最低分」类条件在未选满时不判失败（再加课分数只会变多） |
+| `validateStructure` | 组覆盖、HL 3–4、一门数学、Group 6 替换、跨学科科目（ESS / Literature and Performance）。传入 `examYear` 时还按当年大纲校验层级与科目是否开考 |
+| `evaluateDiploma` | 逐条失败条件亮灯 + 总分 /45（阈值全部来自 `diploma-rules.json`）。**科目数不等于 6，或结构校验不通过**（`structureValid: false`）时返回 `incomplete` 并隐藏总分——官方条件以「合法的六门组合」为前提，六门重复课/缺 Group 1/没有数学都拿不到文凭；「最低分」类条件在未选满时不判失败（再加课分数只会变多） |
 | `getWarnings` | 数据驱动警告（`warnings-rules.json`，新增规则不改代码） |
 | `matchPathways` | 方向匹配：`met / missing` 与 `open / at-risk / closed` |
 | `checkNZUE` | NZ UE 读写（英语 A 任一 level 或英语 B 的 HL）+ 算术（任一数学） |

@@ -63,7 +63,8 @@
       "pass": "Meets the conditions checked here",
       "fail": "Fails at least one condition",
       "indeterminate": "Cannot be decided ({{passMark}} is the pass mark)",
-      "incomplete": "Not a complete diploma yet ({{count}} of {{required}} subjects)"
+      "incomplete": "Not a complete diploma yet ({{count}} of {{required}} subjects)",
+      "incomplete-structure": "The subject combination is not valid, so the diploma conditions cannot be judged"
     },
     "condition": {
       "passed": "OK",
@@ -111,7 +112,9 @@
     "level-not-offered": "{{code}} is not offered at {{level}}.",
     "hl-count": "You need 3 or 4 HL subjects; you have {{actual}}.",
     "math-count": "Exactly one mathematics subject is required; you have {{actual}}.",
-    "group-coverage": "Groups 1-5 must each be covered, and the sixth subject must come from Group 6 or be a valid second subject from Groups 1-4."
+    "group-coverage": "Groups 1-5 must each be covered, and the sixth subject must come from Group 6 or be a valid second subject from Groups 1-4.",
+    "level-not-offered-this-year": "{{code}} is not offered at {{level}} for the {{year}} examination session (that level exists only in a different syllabus version).",
+    "subject-not-offered-this-year": "{{code}} is not examined in {{year}} - it is being replaced by an updated course."
   },
   "ue": {
     "ue-literacy": "Missing the UE literacy requirement: English Language A (HL or SL), or English Language B (HL).",

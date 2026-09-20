@@ -1,4 +1,12 @@
-import type { CoreGrade, Level, Plan, SlotPick, SubjectGrade, Scenario } from '../types/ib'
+import type {
+  CoreGrade,
+  ExamSession,
+  Level,
+  Plan,
+  Scenario,
+  SlotPick,
+  SubjectGrade,
+} from '../types/ib'
 import { emptyPlan, reconcilePlan } from './plan'
 
 /**
@@ -10,6 +18,7 @@ export const SHARE_PARAM = 'plan'
 
 const LEVELS: Level[] = ['HL', 'SL']
 const CORE_GRADES: CoreGrade[] = ['A', 'B', 'C', 'D', 'E', 'N']
+const EXAM_SESSIONS: ExamSession[] = ['may', 'november']
 const MIN_YEAR = 1990
 const MAX_YEAR = 2100
 const MAX_SUBJECTS = 12
@@ -156,6 +165,9 @@ export function decodePlan(encoded: string): Plan | null {
   if (schoolId) plan.schoolId = schoolId
   const dpStartYear = year(parsed.dpStartYear)
   if (dpStartYear !== undefined) plan.dpStartYear = dpStartYear
+  if (EXAM_SESSIONS.includes(parsed.examSession as ExamSession)) {
+    plan.examSession = parsed.examSession as ExamSession
+  }
   if (typeof parsed.nativeLanguageIsEnglish === 'boolean') {
     plan.nativeLanguageIsEnglish = parsed.nativeLanguageIsEnglish
   }

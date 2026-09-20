@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import type { GroupId, Level, Subject, SubjectGroup } from '../types/ib'
 import { useLocalized } from '../hooks/useLocalized'
 import { LevelToggle } from './LevelToggle'
+import { availableLevels } from '../lib/ib-rules'
 
 interface Props {
   group: SubjectGroup
@@ -9,11 +10,21 @@ interface Props {
   slot: GroupId
   options: Subject[]
   selected?: { code: string; level: Level }
+  /** 已知考试年份时，只显示当年大纲提供的层级。 */
+  examYear?: number
   onPick: (code: string, level: Level) => void
   onLevel: (code: string, level: Level) => void
 }
 
-export function SubjectGroupCard({ group, slot, options, selected, onPick, onLevel }: Props) {
+export function SubjectGroupCard({
+  group,
+  slot,
+  options,
+  selected,
+  examYear,
+  onPick,
+  onLevel,
+}: Props) {
   const { t } = useTranslation('selector')
   const { t: l } = useLocalized()
 
@@ -30,7 +41,8 @@ export function SubjectGroupCard({ group, slot, options, selected, onPick, onLev
       <ul className="flex flex-col gap-2">
         {options.map((subject) => {
           const isSelected = selected?.code === subject.code
-          const level = isSelected ? selected.level : (subject.levels[0] ?? 'SL')
+          const levels = availableLevels(subject, examYear)
+          const level = isSelected ? selected.level : (levels[0] ?? 'SL')
           return (
             <li key={subject.code} className="flex flex-wrap items-center gap-2">
               <button
@@ -58,7 +70,7 @@ export function SubjectGroupCard({ group, slot, options, selected, onPick, onLev
               {isSelected && (
                 <LevelToggle
                   value={selected.level}
-                  available={subject.levels}
+                  available={levels}
                   onChange={(next) => onLevel(subject.code, next)}
                   label={l(subject.name)}
                 />

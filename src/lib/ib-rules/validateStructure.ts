@@ -1,9 +1,18 @@
 import type { GroupId, RuleMessage, Selection, StructureResult, Subject } from '../../types/ib'
 import { subjects as defaultSubjects } from '../../data'
-import { coverableGroups, indexSubjects, isMath, resolveSelection } from './subjectUtils'
+import {
+  availableLevels,
+  coverableGroups,
+  indexSubjects,
+  isMath,
+  isSubjectAvailable,
+  resolveSelection,
+} from './subjectUtils'
 
 export interface StructureDeps {
   subjects: Subject[]
+  /** 已知考试年份时，层级与科目可用性按当年的大纲判定。 */
+  examYear?: number
 }
 
 const REQUIRED_SUBJECT_COUNT = 6
@@ -87,10 +96,19 @@ export function validateStructure(
       errors.push({ id: 'duplicate-subject', params: { code: pick.code } })
     }
     seen.add(pick.code)
-    if (!subject.levels.includes(pick.level)) {
+    const levels = availableLevels(subject, deps.examYear)
+    if (!levels.includes(pick.level)) {
       errors.push({
-        id: 'level-not-offered',
-        params: { code: pick.code, level: pick.level },
+        id: deps.examYear !== undefined && subject.levels.includes(pick.level)
+          ? 'level-not-offered-this-year'
+          : 'level-not-offered',
+        params: { code: pick.code, level: pick.level, ...(deps.examYear ? { year: deps.examYear } : {}) },
+      })
+    }
+    if (!isSubjectAvailable(subject, deps.examYear)) {
+      errors.push({
+        id: 'subject-not-offered-this-year',
+        params: { code: pick.code, year: deps.examYear ?? 0 },
       })
     }
   }

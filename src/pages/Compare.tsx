@@ -3,10 +3,8 @@ import type { Plan, SavedPlan } from '../types/ib'
 import { subjects } from '../data'
 import { useLocalized } from '../hooks/useLocalized'
 import { useSelectionStore, MAX_COMPARE } from '../store/selectionStore'
-import { checkNZUE, getWarnings, matchPathways, validateStructure, evaluateDiploma } from '../lib/ib-rules'
-import { toSelection, warningsContextOf } from '../lib/plan'
+import { displayTotal, evaluatePlan } from '../lib/evaluatePlan'
 import { StatusPill } from '../components/StatusPill'
-import type { SubjectGrade } from '../types/ib'
 
 const byCode = new Map(subjects.map((s) => [s.code, s]))
 
@@ -20,27 +18,20 @@ interface Row {
   total: number | null
 }
 
+/**
+ * 与选课页共用 evaluatePlan：同一个方案在两页必须给出同样的结论
+ * （包括结构合法性与按考试年份的大纲判定）。
+ */
 function summarize(plan: Plan): Omit<Row, 'plan'> {
-  const selection = toSelection(plan)
-  const structure = validateStructure(selection)
-  const pathwayMatches = matchPathways(selection, plan.targetPathwayIds)
-  const diploma = evaluateDiploma({
-    grades: plan.subjects.map((pick) => ({
-      code: pick.code,
-      level: pick.level,
-      grade: (plan.grades.safe[pick.code] ?? 4) as SubjectGrade,
-    })),
-    tok: plan.tok,
-    ee: plan.ee,
-    casComplete: plan.casComplete,
-  })
+  const evaluation = evaluatePlan(plan)
   return {
-    valid: structure.valid,
-    warnings: getWarnings(selection, warningsContextOf(plan, structure.valid)).length,
-    ue: checkNZUE(selection).ueLiteracyNumeracy,
-    openPathways: pathwayMatches.filter((m) => m.status === 'meets').length,
-    totalPathways: pathwayMatches.length,
-    total: diploma.total,
+    valid: evaluation.valid,
+    warnings: evaluation.warnings.length,
+    ue: evaluation.ue.ueLiteracyNumeracy,
+    openPathways: evaluation.pathways.filter((m) => m.status === 'meets').length,
+    totalPathways: evaluation.pathways.length,
+    // 结构非法/未选满时不显示数字总分。
+    total: displayTotal(evaluation.diploma.safe),
   }
 }
 

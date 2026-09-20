@@ -4,6 +4,7 @@ import type { Plan, Subject } from '../types/ib'
 import type { PlanEvaluation } from '../hooks/usePlanEvaluation'
 import { useLocalized } from '../hooks/useLocalized'
 import { diplomaRules } from '../data'
+import { displayTotal } from '../lib/evaluatePlan'
 import { StatusPill } from './StatusPill'
 
 interface Props {
@@ -49,16 +50,21 @@ export function PlanSummary({ plan, evaluation, subjectsByCode, onShare, shareFe
           <p key={scenario} className="text-sm text-ink">
             {t(`step4.${scenario}`)}:{' '}
             <span className="font-semibold">
-              {diploma[scenario].status === 'incomplete' ? '—' : (diploma[scenario].total ?? '—')} /{' '}
-              {diploma[scenario].max}
+              {displayTotal(diploma[scenario]) ?? '—'} / {diploma[scenario].max}
             </span>{' '}
             <span className="text-ink-muted">
               (
-              {t(`step4.status.${diploma[scenario].status}`, {
+              {t(
+                diploma[scenario].status === 'incomplete' &&
+                  diploma[scenario].incompleteReason === 'structure'
+                  ? 'step4.status.incomplete-structure'
+                  : `step4.status.${diploma[scenario].status}`,
+                {
                 passMark: diplomaRules.passMark,
-                count: plan.subjects.length,
-                required: diplomaRules.requiredSubjectCount,
-              })}
+                  count: plan.subjects.length,
+                  required: diplomaRules.requiredSubjectCount,
+                },
+              )}
               )
             </span>
           </p>

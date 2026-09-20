@@ -63,7 +63,8 @@
       "pass": "满足此处检查的条件",
       "fail": "至少一条条件不满足",
       "indeterminate": "暂无法判定（及格线 {{passMark}}）",
-      "incomplete": "尚未选满 6 门，无法判定（当前 {{count}} / {{required}} 门）"
+      "incomplete": "尚未选满 6 门，无法判定（当前 {{count}} / {{required}} 门）",
+      "incomplete-structure": "选课组合不合法，无法判定文凭条件"
     },
     "condition": {
       "passed": "通过",
@@ -111,7 +112,9 @@
     "level-not-offered": "{{code}} 不提供 {{level}} 层级。",
     "hl-count": "需要 3 或 4 门 HL，当前 {{actual}} 门。",
     "math-count": "必须且只能选一门数学，当前 {{actual}} 门。",
-    "group-coverage": "Group 1–5 每组都要覆盖，第 6 门须来自 Group 6，或为 Group 1–4 的合规第二门。"
+    "group-coverage": "Group 1–5 每组都要覆盖，第 6 门须来自 Group 6，或为 Group 1–4 的合规第二门。",
+    "level-not-offered-this-year": "{{code}} 在 {{year}} 年的考试中不提供 {{level}}（该层级只存在于另一版大纲）。",
+    "subject-not-offered-this-year": "{{code}} 在 {{year}} 年已不再开考——该课程正被更新版课程取代。"
   },
   "ue": {
     "ue-literacy": "未满足 UE 读写要求：英语 Language A（HL 或 SL），或英语 Language B（HL）。",

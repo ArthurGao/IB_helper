@@ -50,9 +50,15 @@ export function subjectsFromSlots(slots: SlotPick[]): SelectedSubject[] {
     .map(({ code, level }) => ({ code, level }))
 }
 
+const SWAP_SLOT: GroupId = 6
+
 /**
- * 只有 subjects（例如旧版分享链接）时，按科目自身的学科组反推槽位：
- * 本组还空着就占本组，否则退到第 6 槽（Group 6 替换位）。
+ * 只有 subjects（例如旧版分享链接）时，按科目自身的学科组反推槽位。
+ * 只接受两种落点：**本组**，或**第 6 槽**（Group 6 替换位）。
+ *
+ * 推不出合法落点的科目会被丢弃，而不是塞进任意空槽——把 Group 3 的课显示在
+ * Group 4 卡片里，比少一门更难被家长发现。丢弃后科目数不足 6，
+ * validateStructure 会如实报「没选满 6 门」，家长能看见。
  */
 export function slotsFromSubjects(subjects: SelectedSubject[]): SlotPick[] {
   const byCode = new Map(allSubjects.map((s) => [s.code, s]))
@@ -60,8 +66,10 @@ export function slotsFromSubjects(subjects: SelectedSubject[]): SlotPick[] {
   const slots: SlotPick[] = []
   for (const pick of subjects) {
     const subject = byCode.get(pick.code)
-    const preferred = subject ? (subject.satisfiesGroups ?? [subject.group]) : []
-    const slot = preferred.find((g) => !used.has(g)) ?? ([1, 2, 3, 4, 5, 6] as GroupId[]).find((g) => !used.has(g))
+    if (!subject) continue
+    const preferred = subject.satisfiesGroups ?? [subject.group]
+    const slot =
+      preferred.find((g) => !used.has(g)) ?? (used.has(SWAP_SLOT) ? undefined : SWAP_SLOT)
     if (slot === undefined) continue
     used.add(slot)
     slots.push({ slot, code: pick.code, level: pick.level })

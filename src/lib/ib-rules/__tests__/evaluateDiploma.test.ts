@@ -275,6 +275,41 @@ describe('evaluateDiploma', () => {
     expect(result.status).toBe('fail')
   })
 
+  it('六门但结构不合法（如六门重复课）→ incomplete，绝不报 pass', () => {
+    // 六门满分，但结构校验说不合法：官方条件以合法的六门组合为前提。
+    const result = evaluateDiploma(
+      { grades: gradesOf([7, 7, 7, 7, 7, 7]), tok: 'A', ee: 'A', casComplete: true, structureValid: false },
+      withStub(3),
+    )
+    expect(result.status).toBe('incomplete')
+    expect(result.incompleteReason).toBe('structure')
+    expect(result.passed).toBe(false)
+  })
+
+  it('结构合法 + 六门 → 正常判定', () => {
+    const result = evaluateDiploma(
+      { grades: gradesOf([7, 7, 7, 7, 7, 7]), tok: 'A', ee: 'A', casComplete: true, structureValid: true },
+      withStub(3),
+    )
+    expect(result.status).toBe('pass')
+    expect(result.incompleteReason).toBeUndefined()
+  })
+
+  it('不传 structureValid 时退回「只看科目数」，且原因标为 subject-count', () => {
+    const five = gradesOf([7, 7, 7, 7, 7])
+    const result = evaluateDiploma({ grades: five, tok: 'A', ee: 'A', casComplete: true }, withStub(3))
+    expect(result.status).toBe('incomplete')
+    expect(result.incompleteReason).toBe('subject-count')
+  })
+
+  it('结构不合法但已有确定失败项时，仍如实报 fail', () => {
+    const result = evaluateDiploma(
+      { grades: gradesOf([1, 7, 7, 7, 7, 7]), tok: 'A', ee: 'A', casComplete: true, structureValid: false },
+      withStub(3),
+    )
+    expect(result.status).toBe('fail')
+  })
+
   it('官方数据已核实：矩阵与阈值都不再是 null', () => {
     expect(tokEeMatrix._verify?.status).toBe('verified')
     const sl = diplomaRules.conditions.find((c) => c.id === 'min-sl-points')

@@ -362,9 +362,28 @@
         "status": "verified",
         "sourceUrl": "https://www.ibo.org/university-admission/latest-curriculum-updates/environmental-systems-and-societies-updates/",
         "note": {
-          "en": "Verified 2026-09-20: 'Starting in 2024, it will be offered at both standard level (SL) and higher level (HL).' First assessment May 2026. ESS satisfies groups 3 and 4.",
-          "zh": "2026-09-20 核实：官方原文「Starting in 2024, it will be offered at both standard level (SL) and higher level (HL).」，2026 年 5 月首次评估。ESS 同时满足 Group 3 与 4。"
+          "en": "Verified 2026-09-20: 'Starting in 2024, it will be offered at both standard level (SL) and higher level (HL)' with first assessment May 2026. The 2025-and-earlier boundary is therefore derived from that first-assessment year, not from a separate IB statement.",
+          "zh": "2026-09-20 核实：官方原文「Starting in 2024, it will be offered at both standard level (SL) and higher level (HL)」，首次评估为 2026 年 5 月。因此「2025 及更早只有 SL」是由该首次评估年份推导，并非 IB 的另一条独立表述。"
         }
+      },
+      "levelAvailability": [
+        {
+          "levels": [
+            "SL"
+          ],
+          "throughExamYear": 2025
+        },
+        {
+          "levels": [
+            "SL",
+            "HL"
+          ],
+          "fromExamYear": 2026
+        }
+      ],
+      "note": {
+        "en": "HL is only available in the syllabus first assessed in May 2026; candidates sitting earlier sessions can take ESS at SL only. ESS satisfies groups 3 and 4.",
+        "zh": "HL 仅存在于 2026 年 5 月首次评估的新大纲；更早的考生只能选 ESS 的 SL。ESS 同时满足 Group 3 与 4。"
       }
     },
     {
@@ -601,14 +620,15 @@
         "status": "verified",
         "sourceUrl": "https://www.ibo.org/programmes/diploma-programme/curriculum/individuals-and-societies/world-religions/",
         "note": {
-          "en": "Verified 2026-09-20: the official world religions page offers an SL subject brief only, and states 'Religion and societies will replace world religions. Read the subject brief for the first assessment in 2029.' The levels of the new course are not stated there, so it is not listed as a selectable subject yet.",
-          "zh": "2026-09-20 核实：官方 world religions 页面只提供 SL 的 subject brief，并写明「Religion and societies will replace world religions. Read the subject brief for the first assessment in 2029.」新课程的层级该页未说明，因此暂不作为可选科目列出。"
+          "en": "Verified 2026-09-20: only an SL subject brief is published, and the page states 'Religion and societies will replace world religions. Read the subject brief for the first assessment in 2029.' The 2028 last-exam year is derived from that 2029 first assessment; the replacement course's levels are not published, so it is not yet a selectable subject.",
+          "zh": "2026-09-20 核实：官方只发布 SL 的 subject brief，并写明「Religion and societies will replace world religions. Read the subject brief for the first assessment in 2029.」「最后可考 2028」由该 2029 首次评估推导；替代课程的层级官方未公布，因此暂不作为可选科目。"
         }
       },
       "note": {
         "en": "SL only. A redesigned course called 'religion and society' replaces world religions, with first teaching 2027 and first assessment 2029 - see Curriculum updates.",
         "zh": "仅提供 SL。该课程将由全新设计的「religion and society（宗教与社会）」取代，2027 年首教、2029 年首次评估——见「课程改革」页。"
-      }
+      },
+      "availableThroughExamYear": 2028
     }
   ]
 }

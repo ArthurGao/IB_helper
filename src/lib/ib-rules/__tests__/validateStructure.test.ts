@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import { subjects } from '../../../data'
 import { validateStructure } from '../validateStructure'
 import { BASELINE, sel } from './fixtures'
 
@@ -124,6 +125,44 @@ describe('validateStructure', () => {
     expect(
       errorIds(['lang-a-lit-en:HL', 'mandarin-b:SL', 'history:SL', 'math-aa:HL', 'visual-arts:HL', 'music:SL']),
     ).toContain('group-coverage')
+  })
+
+  it('按考试年份判层级：ESS HL 在 2026 起可选，2025 及更早只有 SL', () => {
+    const essHl = [
+      'lang-a-lit-en:SL',
+      'mandarin-b:SL',
+      'ess:HL',
+      'physics:HL',
+      'math-aa:HL',
+      'visual-arts:SL',
+    ]
+    const newSyllabus = validateStructure(sel(essHl), { subjects, examYear: 2026 })
+    expect(newSyllabus.errors).toEqual([])
+
+    const oldSyllabus = validateStructure(sel(essHl), { subjects, examYear: 2025 })
+    expect(oldSyllabus.errors.map((e) => e.id)).toContain('level-not-offered-this-year')
+  })
+
+  it('不知道考试年份时回落到当前大纲（不推测）', () => {
+    const result = validateStructure(
+      sel(['lang-a-lit-en:SL', 'mandarin-b:SL', 'ess:HL', 'physics:HL', 'math-aa:HL', 'visual-arts:SL']),
+    )
+    expect(result.errors).toEqual([])
+  })
+
+  it('按考试年份判科目：World Religions 2029 年起不再开考', () => {
+    const wr = [
+      'lang-a-lit-en:HL',
+      'mandarin-b:SL',
+      'world-religions:SL',
+      'chemistry:HL',
+      'math-aa:HL',
+      'biology:HL',
+    ]
+    expect(validateStructure(sel(wr), { subjects, examYear: 2028 }).errors).toEqual([])
+    expect(
+      validateStructure(sel(wr), { subjects, examYear: 2029 }).errors.map((e) => e.id),
+    ).toContain('subject-not-offered-this-year')
   })
 
   it('错误只带 id / params，不含硬编码文案（交给 i18n）', () => {

@@ -5,6 +5,7 @@ import type { GroupId, Subject } from '../types/ib'
 import { groups, pathways, schools, subjects, universities, diplomaRules } from '../data'
 import { useLocalized } from '../hooks/useLocalized'
 import { usePlanEvaluation, subjectsByCode } from '../hooks/usePlanEvaluation'
+import { isSubjectAvailable } from '../lib/ib-rules'
 import { useSelectionStore } from '../store/selectionStore'
 import { planShareUrl, readPlanFromSearch } from '../lib/share'
 import { planSignature, recordPlan } from '../lib/analytics'
@@ -62,11 +63,14 @@ export default function Selector() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [evaluation.valid, planKey])
 
+  // 可选科目 = 学校开设 ∩ 该考试年份仍开考（例如 World Religions 到 2028 年为止）。
   const offeredSubjects = useMemo(() => {
     const school = schools.find((s) => s.id === plan.schoolId)
-    if (!school?.offeredSubjectCodes) return subjects
-    return subjects.filter((s) => school.offeredSubjectCodes?.includes(s.code))
-  }, [plan.schoolId])
+    const bySchool = school?.offeredSubjectCodes
+      ? subjects.filter((s) => school.offeredSubjectCodes?.includes(s.code))
+      : subjects
+    return bySchool.filter((s) => isSubjectAvailable(s, evaluation.examYear))
+  }, [plan.schoolId, evaluation.examYear])
 
   const handleShare = async () => {
     const url = planShareUrl(plan, window.location.origin)
@@ -255,6 +259,7 @@ export default function Selector() {
                 group={group}
                 slot={slot}
                 options={optionsForSlot(slot, offeredSubjects)}
+                examYear={evaluation.examYear}
                 {...(selected ? { selected: { code: selected.code, level: selected.level } } : {})}
                 onPick={(code, level) => store.pickSubject(slot, code, level)}
                 onLevel={(code, level) => store.setLevel(code, level)}

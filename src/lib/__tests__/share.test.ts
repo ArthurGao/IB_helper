@@ -27,6 +27,15 @@ describe('方案分享编解码', () => {
     ])
   })
 
+  it('考试 session 会被保留（否则接收方无法判新旧大纲）', () => {
+    const november = { ...plan, examSession: 'november' as const }
+    expect(decodePlan(encodePlan(november))?.examSession).toBe('november')
+    const may = { ...plan, examSession: 'may' as const }
+    expect(decodePlan(encodePlan(may))?.examSession).toBe('may')
+    // 未选择时不应凭空补一个
+    expect(decodePlan(encodePlan(plan))?.examSession).toBeUndefined()
+  })
+
   it('带槽位的方案原样往返', () => {
     const withSlots = {
       ...plan,
@@ -97,6 +106,39 @@ describe('分享链接的运行时校验（链接内容不可信）', () => {
     expect(decoded?.slots).toEqual([])
   })
 
+  it('推不出合法槽位的科目被丢弃，而不是塞进不相干的学科组', () => {
+    const decoded = decodePlan(
+      encode({
+        subjects: [
+          { code: 'history', level: 'HL' },
+          { code: 'economics', level: 'SL' },
+          { code: 'geography', level: 'SL' },
+        ],
+      }),
+    )
+    // history → Group 3，economics → 替换槽 6，geography 无处可放 → 丢弃
+    expect(decoded?.slots).toEqual([
+      { slot: 3, code: 'history', level: 'HL' },
+      { slot: 6, code: 'economics', level: 'SL' },
+    ])
+    expect(decoded?.subjects.map((s) => s.code)).not.toContain('geography')
+  })
+
+  it('旧链接反推槽位：第二门 Group 3 落到替换槽 6，而不是空着的 Group 4', () => {
+    const decoded = decodePlan(
+      encode({
+        subjects: [
+          { code: 'history', level: 'HL' },
+          { code: 'economics', level: 'SL' },
+        ],
+      }),
+    )
+    expect(decoded?.slots).toEqual([
+      { slot: 3, code: 'history', level: 'HL' },
+      { slot: 6, code: 'economics', level: 'SL' },
+    ])
+  })
+
   it('丢弃结构不合法的科目条目', () => {
     const decoded = decodePlan(
       encode({
@@ -135,6 +177,10 @@ describe('分享链接的运行时校验（链接内容不可信）', () => {
     )
     expect(decoded?.grades.safe).toEqual({ a: 5, c: 'N' })
     expect(decoded?.grades.best).toEqual({})
+  })
+
+  it('非法的 session 值被丢弃', () => {
+    expect(decodePlan(encode({ subjects: [], examSession: 'august' }))?.examSession).toBeUndefined()
   })
 
   it('非法的 TOK/EE/CAS/年份回落到默认值', () => {
