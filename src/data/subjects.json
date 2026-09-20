@@ -1,0 +1,614 @@
+{
+  "lastVerified": "2026-09-20",
+  "sourceUrl": "https://www.ibo.org/programmes/diploma-programme/curriculum/",
+  "_verify": {
+    "status": "verified",
+    "sourceUrl": "https://www.ibo.org/programmes/diploma-programme/curriculum/",
+    "note": {
+      "en": "Subject list verified 2026-09-20 against the official DP curriculum pages for each group (studies in language and literature, language acquisition, individuals and societies, sciences, mathematics, the arts). Language A / Language B / ab initio are offered in many languages - only the ones relevant to this tool's New Zealand + Chinese-speaking audience are listed, and `code` is an app-internal id, NOT an official IB subject code. What a school actually offers is always narrower.",
+      "zh": "科目清单于 2026-09-20 对照 IB 官方 DP 课程各学科组页面核实（语言与文学、语言习得、个人与社会、科学、数学、艺术）。Language A / Language B / ab initio 提供多种语言，这里只列出与本工具受众（新西兰 + 中文家庭）相关的语言；`code` 为本应用内部标识，非 IB 官方科目代码。学校实际开设的范围一定更窄。"
+    }
+  },
+  "subjects": [
+    {
+      "code": "lang-a-lit-en",
+      "name": {
+        "en": "English A: Literature",
+        "zh": "英语 A：文学"
+      },
+      "group": 1,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "language-a",
+        "english",
+        "humanities"
+      ]
+    },
+    {
+      "code": "lang-a-langlit-en",
+      "name": {
+        "en": "English A: Language and Literature",
+        "zh": "英语 A：语言与文学"
+      },
+      "group": 1,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "language-a",
+        "english",
+        "humanities"
+      ]
+    },
+    {
+      "code": "lang-a-lit-zh",
+      "name": {
+        "en": "Chinese A: Literature",
+        "zh": "中文 A：文学"
+      },
+      "group": 1,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "language-a",
+        "chinese",
+        "humanities"
+      ]
+    },
+    {
+      "code": "lang-a-langlit-zh",
+      "name": {
+        "en": "Chinese A: Language and Literature",
+        "zh": "中文 A：语言与文学"
+      },
+      "group": 1,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "language-a",
+        "chinese",
+        "humanities"
+      ]
+    },
+    {
+      "code": "english-b",
+      "name": {
+        "en": "English B",
+        "zh": "英语 B"
+      },
+      "group": 2,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "language-b",
+        "english"
+      ]
+    },
+    {
+      "code": "mandarin-b",
+      "name": {
+        "en": "Mandarin B",
+        "zh": "中文 B"
+      },
+      "group": 2,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "language-b",
+        "chinese"
+      ]
+    },
+    {
+      "code": "spanish-b",
+      "name": {
+        "en": "Spanish B",
+        "zh": "西班牙语 B"
+      },
+      "group": 2,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "language-b"
+      ]
+    },
+    {
+      "code": "french-b",
+      "name": {
+        "en": "French B",
+        "zh": "法语 B"
+      },
+      "group": 2,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "language-b"
+      ]
+    },
+    {
+      "code": "language-ab-initio",
+      "name": {
+        "en": "Language ab initio",
+        "zh": "语言 ab initio（零起点）"
+      },
+      "group": 2,
+      "levels": [
+        "SL"
+      ],
+      "tags": [
+        "language-ab-initio"
+      ],
+      "_verify": {
+        "status": "unverified",
+        "sourceUrl": "https://www.ibo.org/programmes/diploma-programme/curriculum/",
+        "note": {
+          "en": "TODO verify: ab initio is seeded as SL-only.",
+          "zh": "待核实：ab initio 按 SL only 落地。"
+        }
+      }
+    },
+    {
+      "code": "history",
+      "name": {
+        "en": "History",
+        "zh": "历史"
+      },
+      "group": 3,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "humanities",
+        "essay-heavy"
+      ]
+    },
+    {
+      "code": "economics",
+      "name": {
+        "en": "Economics",
+        "zh": "经济学"
+      },
+      "group": 3,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "humanities",
+        "quantitative"
+      ]
+    },
+    {
+      "code": "geography",
+      "name": {
+        "en": "Geography",
+        "zh": "地理"
+      },
+      "group": 3,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "humanities"
+      ]
+    },
+    {
+      "code": "psychology",
+      "name": {
+        "en": "Psychology",
+        "zh": "心理学"
+      },
+      "group": 3,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "humanities",
+        "social-science"
+      ]
+    },
+    {
+      "code": "business-management",
+      "name": {
+        "en": "Business Management",
+        "zh": "商业管理"
+      },
+      "group": 3,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "humanities",
+        "business"
+      ]
+    },
+    {
+      "code": "digital-society",
+      "name": {
+        "en": "Digital Society",
+        "zh": "数字社会"
+      },
+      "group": 3,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "humanities",
+        "technology"
+      ]
+    },
+    {
+      "code": "physics",
+      "name": {
+        "en": "Physics",
+        "zh": "物理"
+      },
+      "group": 4,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "science",
+        "lab",
+        "quantitative"
+      ]
+    },
+    {
+      "code": "chemistry",
+      "name": {
+        "en": "Chemistry",
+        "zh": "化学"
+      },
+      "group": 4,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "science",
+        "lab"
+      ]
+    },
+    {
+      "code": "biology",
+      "name": {
+        "en": "Biology",
+        "zh": "生物"
+      },
+      "group": 4,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "science",
+        "lab"
+      ]
+    },
+    {
+      "code": "computer-science",
+      "name": {
+        "en": "Computer Science",
+        "zh": "计算机科学"
+      },
+      "group": 4,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "science",
+        "technology"
+      ]
+    },
+    {
+      "code": "design-technology",
+      "name": {
+        "en": "Design Technology",
+        "zh": "设计技术"
+      },
+      "group": 4,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "science",
+        "design"
+      ]
+    },
+    {
+      "code": "ess",
+      "name": {
+        "en": "Environmental Systems and Societies (ESS)",
+        "zh": "环境系统与社会（ESS）"
+      },
+      "group": 4,
+      "levels": [
+        "SL",
+        "HL"
+      ],
+      "satisfiesGroups": [
+        3,
+        4
+      ],
+      "tags": [
+        "science",
+        "humanities",
+        "interdisciplinary"
+      ],
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://www.ibo.org/university-admission/latest-curriculum-updates/environmental-systems-and-societies-updates/",
+        "note": {
+          "en": "Verified 2026-09-20: 'Starting in 2024, it will be offered at both standard level (SL) and higher level (HL).' First assessment May 2026. ESS satisfies groups 3 and 4.",
+          "zh": "2026-09-20 核实：官方原文「Starting in 2024, it will be offered at both standard level (SL) and higher level (HL).」，2026 年 5 月首次评估。ESS 同时满足 Group 3 与 4。"
+        }
+      }
+    },
+    {
+      "code": "sehs",
+      "name": {
+        "en": "Sports, Exercise and Health Science (SEHS)",
+        "zh": "运动、锻炼与健康科学（SEHS）"
+      },
+      "group": 4,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "science",
+        "lab"
+      ]
+    },
+    {
+      "code": "math-aa",
+      "name": {
+        "en": "Mathematics: Analysis and Approaches (AA)",
+        "zh": "数学：分析与方法（AA）"
+      },
+      "group": 5,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "mathType": "AA",
+      "tags": [
+        "mathematics",
+        "quantitative"
+      ]
+    },
+    {
+      "code": "math-ai",
+      "name": {
+        "en": "Mathematics: Applications and Interpretation (AI)",
+        "zh": "数学：应用与解释（AI）"
+      },
+      "group": 5,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "mathType": "AI",
+      "tags": [
+        "mathematics",
+        "quantitative"
+      ]
+    },
+    {
+      "code": "visual-arts",
+      "name": {
+        "en": "Visual Arts",
+        "zh": "视觉艺术"
+      },
+      "group": 6,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "arts",
+        "portfolio"
+      ]
+    },
+    {
+      "code": "music",
+      "name": {
+        "en": "Music",
+        "zh": "音乐"
+      },
+      "group": 6,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "arts"
+      ]
+    },
+    {
+      "code": "theatre",
+      "name": {
+        "en": "Theatre",
+        "zh": "戏剧"
+      },
+      "group": 6,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "arts"
+      ]
+    },
+    {
+      "code": "dance",
+      "name": {
+        "en": "Dance",
+        "zh": "舞蹈"
+      },
+      "group": 6,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "arts"
+      ]
+    },
+    {
+      "code": "film",
+      "name": {
+        "en": "Film",
+        "zh": "电影"
+      },
+      "group": 6,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "arts"
+      ]
+    },
+    {
+      "code": "literature-and-performance",
+      "name": {
+        "en": "Literature and Performance",
+        "zh": "文学与表演"
+      },
+      "group": 6,
+      "levels": [
+        "SL"
+      ],
+      "satisfiesGroups": [
+        1,
+        6
+      ],
+      "tags": [
+        "arts",
+        "language-a",
+        "interdisciplinary"
+      ],
+      "_verify": {
+        "status": "unverified",
+        "sourceUrl": "https://www.ibo.org/programmes/diploma-programme/curriculum/",
+        "note": {
+          "en": "TODO verify: seeded as SL-only, satisfying groups 1 and 6 (spec 9.1).",
+          "zh": "待核实：按规格 9.1 以 SL only 落地，同时满足 Group 1 与 Group 6。"
+        }
+      }
+    },
+    {
+      "code": "classical-languages",
+      "name": {
+        "en": "Classical Languages (Latin or Classical Greek)",
+        "zh": "古典语言（拉丁语或古希腊语）"
+      },
+      "group": 2,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "language-classical"
+      ]
+    },
+    {
+      "code": "global-politics",
+      "name": {
+        "en": "Global Politics",
+        "zh": "全球政治"
+      },
+      "group": 3,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "humanities",
+        "social-science"
+      ]
+    },
+    {
+      "code": "philosophy",
+      "name": {
+        "en": "Philosophy",
+        "zh": "哲学"
+      },
+      "group": 3,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "humanities",
+        "essay-heavy"
+      ]
+    },
+    {
+      "code": "social-cultural-anthropology",
+      "name": {
+        "en": "Social and Cultural Anthropology",
+        "zh": "社会与文化人类学"
+      },
+      "group": 3,
+      "levels": [
+        "HL",
+        "SL"
+      ],
+      "tags": [
+        "humanities",
+        "social-science"
+      ]
+    },
+    {
+      "code": "world-religions",
+      "name": {
+        "en": "World Religions",
+        "zh": "世界宗教"
+      },
+      "group": 3,
+      "levels": [
+        "SL"
+      ],
+      "tags": [
+        "humanities"
+      ],
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://www.ibo.org/programmes/diploma-programme/curriculum/individuals-and-societies/world-religions/",
+        "note": {
+          "en": "Verified 2026-09-20: the official world religions page offers an SL subject brief only, and states 'Religion and societies will replace world religions. Read the subject brief for the first assessment in 2029.' The levels of the new course are not stated there, so it is not listed as a selectable subject yet.",
+          "zh": "2026-09-20 核实：官方 world religions 页面只提供 SL 的 subject brief，并写明「Religion and societies will replace world religions. Read the subject brief for the first assessment in 2029.」新课程的层级该页未说明，因此暂不作为可选科目列出。"
+        }
+      },
+      "note": {
+        "en": "SL only. A redesigned course called 'religion and society' replaces world religions, with first teaching 2027 and first assessment 2029 - see Curriculum updates.",
+        "zh": "仅提供 SL。该课程将由全新设计的「religion and society（宗教与社会）」取代，2027 年首教、2029 年首次评估——见「课程改革」页。"
+      }
+    }
+  ]
+}

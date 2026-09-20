@@ -1,0 +1,23 @@
+{
+  "lastVerified": "2026-09-20",
+  "sourceUrl": "https://ibo.org/about-the-ib/what-it-means-to-be-an-ib-student/recognizing-student-achievement/about-assessment/dp-passing-criteria/",
+  "_verify": {
+    "status": "verified",
+    "sourceUrl": "https://ibo.org/about-the-ib/what-it-means-to-be-an-ib-student/recognizing-student-achievement/about-assessment/dp-passing-criteria/",
+    "note": {
+      "en": "Verified 2026-09-20 against the official IB 'DP passing criteria' core points matrix. Read as matrix[TOK grade][EE grade]. A grade E in either TOK or the EE is a failing condition, so the whole E row and E column are FAIL. Official worked example: TOK B + EE C = 2 points.",
+      "zh": "2026-09-20 对照 IB 官方「DP passing criteria」的 Core points matrix 核实。读法为 matrix[TOK 成绩][EE 成绩]。TOK 或 EE 任一为 E 即失败条件，因此整行整列 E 均为 FAIL。官方示例：TOK B + EE C = 2 分。"
+    }
+  },
+  "failMsg": {
+    "en": "A grade E in TOK or the Extended Essay is a failing condition: no diploma is awarded.",
+    "zh": "TOK 或 EE 出现 E 属于失败条件：不予文凭。"
+  },
+  "matrix": {
+    "A": { "A": 3, "B": 3, "C": 2, "D": 2, "E": "FAIL" },
+    "B": { "A": 3, "B": 2, "C": 2, "D": 1, "E": "FAIL" },
+    "C": { "A": 2, "B": 2, "C": 1, "D": 0, "E": "FAIL" },
+    "D": { "A": 2, "B": 1, "C": 0, "D": 0, "E": "FAIL" },
+    "E": { "A": "FAIL", "B": "FAIL", "C": "FAIL", "D": "FAIL", "E": "FAIL" }
+  }
+}

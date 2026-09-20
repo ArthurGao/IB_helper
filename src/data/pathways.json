@@ -1,0 +1,169 @@
+{
+  "lastVerified": "2026-09-20",
+  "sourceUrl": "https://www.ibo.org/university-admission/",
+  "_verify": {
+    "status": "unverified",
+    "sourceUrl": "https://www.ibo.org/university-admission/",
+    "note": {
+      "en": "TODO verify per university: these are GENERIC subject-choice guidance, so every entry sits in recommendedHL and requiredHL is deliberately empty. requiredHL is reserved for rules verified at the level of a specific university + programme + entry year; until such data exists the tool must not tell a family that a subject is 'required'. Entry routes differ by country - e.g. New Zealand school leavers enter medicine through a first-year university programme.",
+      "zh": "待逐校核实：这些是「通用选课参考」，因此全部放在 recommendedHL，requiredHL 刻意留空。requiredHL 只保留给「具体大学 + 具体专业 + 入学年份」级别、已核实的规则；在拿到这类数据之前，本工具不应告诉家长某门课是「必需」的。各国入口不同——例如新西兰高中毕业生是通过大学一年级课程入读医学。"
+    }
+  },
+  "pathways": [
+    {
+      "id": "medicine",
+      "name": {
+        "en": "Medicine",
+        "zh": "医学"
+      },
+      "requiredHL": [],
+      "recommendedHL": [
+        "chemistry",
+        "biology"
+      ],
+      "note": {
+        "en": "Generic guidance only. In New Zealand, school leavers cannot apply directly to a medical degree - entry is through a first-year university programme, and the high-school subjects are recommendations rather than hard requirements. Some countries expect three HL sciences. Always check the target university's own page.",
+        "zh": "仅为通用参考。在新西兰，高中毕业生不能直接申请医学学位——须通过大学一年级课程入读，高中科目多为建议而非硬性要求。部分国家要求三门 HL 理科。务必查看目标大学官网。"
+      }
+    },
+    {
+      "id": "engineering",
+      "name": {
+        "en": "Engineering",
+        "zh": "工程"
+      },
+      "requiredHL": [],
+      "recommendedHL": [
+        "math-aa",
+        "physics"
+      ],
+      "note": {
+        "en": "Generic guidance only: most engineering schools expect Mathematics AA rather than AI, and usually HL Physics. Requirements differ by university and programme - always check the official page.",
+        "zh": "仅为通用参考：多数工程学院要求数学 AA 而非 AI，通常还要 HL 物理。各校各专业要求不同，务必查看官网。"
+      }
+    },
+    {
+      "id": "cs",
+      "name": {
+        "en": "Computer Science",
+        "zh": "计算机科学"
+      },
+      "requiredHL": [],
+      "recommendedHL": [
+        "math-aa|math-ai",
+        "physics|computer-science",
+        "math-aa"
+      ],
+      "note": {
+        "en": "Mathematics AA is usually preferred. Subject to each university/programme.",
+        "zh": "通常优先 数学 AA。以各大学/专业官网为准。"
+      }
+    },
+    {
+      "id": "business-economics",
+      "name": {
+        "en": "Business / Economics",
+        "zh": "商科 / 经济"
+      },
+      "requiredHL": [],
+      "recommendedHL": [
+        "math-aa|math-ai|economics"
+      ],
+      "note": {
+        "en": "HL Mathematics or HL Economics is the common starting point. Subject to each university/programme.",
+        "zh": "常见起点是 HL 数学 或 HL 经济。以各大学/专业官网为准。"
+      }
+    },
+    {
+      "id": "law",
+      "name": {
+        "en": "Law",
+        "zh": "法律"
+      },
+      "requiredHL": [],
+      "recommendedHL": [
+        "tag:humanities"
+      ],
+      "note": {
+        "en": "No fixed subject requirement; language and humanities HLs (History, English Literature) are common. Subject to each university/programme.",
+        "zh": "无固定科目要求；语言与人文 HL（历史、英语文学）常见。以各大学/专业官网为准。"
+      }
+    },
+    {
+      "id": "science",
+      "name": {
+        "en": "Science Research",
+        "zh": "理科研究"
+      },
+      "requiredHL": [],
+      "recommendedHL": [
+        "tag:science",
+        "math-aa"
+      ],
+      "note": {
+        "en": "Take the matching science at HL; HL Mathematics AA helps. Subject to each university/programme.",
+        "zh": "对应学科取 HL；HL 数学 AA 加分。以各大学/专业官网为准。"
+      }
+    },
+    {
+      "id": "architecture",
+      "name": {
+        "en": "Architecture",
+        "zh": "建筑"
+      },
+      "requiredHL": [],
+      "recommendedHL": [
+        "math-aa|math-ai|physics"
+      ],
+      "note": {
+        "en": "Some schools require a portfolio and/or Visual Arts. Subject to each university/programme.",
+        "zh": "部分学校要求作品集和/或视觉艺术。以各大学/专业官网为准。"
+      }
+    },
+    {
+      "id": "art-design",
+      "name": {
+        "en": "Art & Design",
+        "zh": "艺术设计"
+      },
+      "requiredHL": [],
+      "recommendedHL": [
+        "visual-arts"
+      ],
+      "note": {
+        "en": "A portfolio is normally required. Subject to each university/programme.",
+        "zh": "通常需要作品集。以各大学/专业官网为准。"
+      }
+    },
+    {
+      "id": "social-sciences",
+      "name": {
+        "en": "Social Sciences",
+        "zh": "社会科学"
+      },
+      "requiredHL": [],
+      "recommendedHL": [
+        "psychology|history|economics"
+      ],
+      "note": {
+        "en": "One humanities HL (Psychology, History or Economics). Subject to each university/programme.",
+        "zh": "人文 HL 择一（心理、历史或经济）。以各大学/专业官网为准。"
+      }
+    },
+    {
+      "id": "undecided",
+      "name": {
+        "en": "Undecided",
+        "zh": "未定"
+      },
+      "requiredHL": [],
+      "recommendedHL": [
+        "math-aa|math-ai"
+      ],
+      "note": {
+        "en": "Keep the most doors open: a balanced combination including HL Mathematics.",
+        "zh": "保持最多门开放：含 HL 数学的均衡组合。"
+      }
+    }
+  ]
+}

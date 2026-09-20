@@ -1,0 +1,186 @@
+{
+  "lastVerified": "2026-09-20",
+  "sourceUrl": "https://ibo.org/about-the-ib/what-it-means-to-be-an-ib-student/recognizing-student-achievement/about-assessment/dp-passing-criteria/",
+  "_verify": {
+    "status": "verified",
+    "sourceUrl": "https://ibo.org/about-the-ib/what-it-means-to-be-an-ib-student/recognizing-student-achievement/about-assessment/dp-passing-criteria/",
+    "note": {
+      "en": "Verified 2026-09-20 against the official IB 'DP passing criteria' page ('Conditions for achieving the diploma'). Every threshold below is quoted from that list.",
+      "zh": "2026-09-20 对照 IB 官方「DP passing criteria」页面的「Conditions for achieving the diploma」核实，以下每个阈值均取自该列表。"
+    }
+  },
+  "maxPoints": 45,
+  "passMark": 24,
+  "requiredSubjectCount": 6,
+  "conditions": [
+    {
+      "id": "cas-complete",
+      "type": "cas-complete",
+      "msg": {
+        "en": "CAS requirements are met.",
+        "zh": "完成 CAS 要求。"
+      },
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://ibo.org/about-the-ib/what-it-means-to-be-an-ib-student/recognizing-student-achievement/about-assessment/dp-passing-criteria/",
+        "note": {
+          "en": "Quoted from the official 'Conditions for achieving the diploma' list.",
+          "zh": "引自官方「Conditions for achieving the diploma」列表。"
+        }
+      }
+    },
+    {
+      "id": "min-total",
+      "type": "min-total",
+      "threshold": 24,
+      "msg": {
+        "en": "The candidate has achieved at least 24 total points.",
+        "zh": "总分至少 24 分。"
+      },
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://ibo.org/about-the-ib/what-it-means-to-be-an-ib-student/recognizing-student-achievement/about-assessment/dp-passing-criteria/",
+        "note": {
+          "en": "Quoted from the official 'Conditions for achieving the diploma' list.",
+          "zh": "引自官方「Conditions for achieving the diploma」列表。"
+        }
+      }
+    },
+    {
+      "id": "no-subject-n",
+      "type": "no-n-grade",
+      "msg": {
+        "en": "A grade has been awarded in all subjects.",
+        "zh": "所有科目都已评出成绩（不得为 N）。"
+      },
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://ibo.org/about-the-ib/what-it-means-to-be-an-ib-student/recognizing-student-achievement/about-assessment/dp-passing-criteria/",
+        "note": {
+          "en": "Quoted from the official 'Conditions for achieving the diploma' list.",
+          "zh": "引自官方「Conditions for achieving the diploma」列表。"
+        }
+      }
+    },
+    {
+      "id": "no-core-n",
+      "type": "no-core-n",
+      "msg": {
+        "en": "A grade has been awarded in TOK and the EE.",
+        "zh": "TOK 与 EE 都已评出成绩（不得为 N）。"
+      },
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://ibo.org/about-the-ib/what-it-means-to-be-an-ib-student/recognizing-student-achievement/about-assessment/dp-passing-criteria/",
+        "note": {
+          "en": "Quoted from the official 'Conditions for achieving the diploma' list.",
+          "zh": "引自官方「Conditions for achieving the diploma」列表。"
+        }
+      }
+    },
+    {
+      "id": "no-core-e",
+      "type": "no-core-e",
+      "msg": {
+        "en": "A grade E in TOK or the EE is a failing condition.",
+        "zh": "TOK 或 EE 出现 E 属于失败条件。"
+      },
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://ibo.org/about-the-ib/what-it-means-to-be-an-ib-student/recognizing-student-achievement/about-assessment/dp-passing-criteria/",
+        "note": {
+          "en": "Quoted from the official 'Conditions for achieving the diploma' list.",
+          "zh": "引自官方「Conditions for achieving the diploma」列表。"
+        }
+      }
+    },
+    {
+      "id": "no-grade-1",
+      "type": "no-grade-1",
+      "msg": {
+        "en": "A grade of at least a 2 has been awarded in all subjects.",
+        "zh": "所有科目成绩至少为 2（即不得出现 1）。"
+      },
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://ibo.org/about-the-ib/what-it-means-to-be-an-ib-student/recognizing-student-achievement/about-assessment/dp-passing-criteria/",
+        "note": {
+          "en": "Quoted from the official 'Conditions for achieving the diploma' list.",
+          "zh": "引自官方「Conditions for achieving the diploma」列表。"
+        }
+      }
+    },
+    {
+      "id": "max-grade-2",
+      "type": "max-grade-2-count",
+      "threshold": 2,
+      "msg": {
+        "en": "There are no more than two grade 2s awarded (SL or HL).",
+        "zh": "成绩 2 不超过 2 门（SL 或 HL）。"
+      },
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://ibo.org/about-the-ib/what-it-means-to-be-an-ib-student/recognizing-student-achievement/about-assessment/dp-passing-criteria/",
+        "note": {
+          "en": "Quoted from the official 'Conditions for achieving the diploma' list.",
+          "zh": "引自官方「Conditions for achieving the diploma」列表。"
+        }
+      }
+    },
+    {
+      "id": "max-grade-3-or-below",
+      "type": "max-grade-3-or-below-count",
+      "threshold": 3,
+      "msg": {
+        "en": "There are no more than three grade 3s or below awarded (SL or HL).",
+        "zh": "成绩 3 或以下不超过 3 门（SL 或 HL）。"
+      },
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://ibo.org/about-the-ib/what-it-means-to-be-an-ib-student/recognizing-student-achievement/about-assessment/dp-passing-criteria/",
+        "note": {
+          "en": "Quoted from the official 'Conditions for achieving the diploma' list.",
+          "zh": "引自官方「Conditions for achieving the diploma」列表。"
+        }
+      }
+    },
+    {
+      "id": "min-hl-points",
+      "type": "min-hl-points",
+      "threshold": 12,
+      "bestOf": 3,
+      "msg": {
+        "en": "The candidate has at least 12 points on HL subjects. For candidates who register for four HL subjects, the three highest grades count.",
+        "zh": "HL 科目至少 12 分；注册 4 门 HL 的考生取最高 3 门计算。"
+      },
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://ibo.org/about-the-ib/what-it-means-to-be-an-ib-student/recognizing-student-achievement/about-assessment/dp-passing-criteria/",
+        "note": {
+          "en": "Quoted from the official 'Conditions for achieving the diploma' list.",
+          "zh": "引自官方「Conditions for achieving the diploma」列表。"
+        }
+      }
+    },
+    {
+      "id": "min-sl-points",
+      "type": "min-sl-points",
+      "thresholdBySlCount": {
+        "3": 9,
+        "2": 5
+      },
+      "msg": {
+        "en": "Candidates have at least 9 points on SL subjects. Candidates who register for two SL subjects must be awarded at least 5 points at SL.",
+        "zh": "SL 科目至少 9 分；注册 2 门 SL 的考生至少 5 分。"
+      },
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://ibo.org/about-the-ib/what-it-means-to-be-an-ib-student/recognizing-student-achievement/about-assessment/dp-passing-criteria/",
+        "note": {
+          "en": "Quoted from the official 'Conditions for achieving the diploma' list.",
+          "zh": "引自官方「Conditions for achieving the diploma」列表。"
+        }
+      }
+    }
+  ]
+}

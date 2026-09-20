@@ -1,0 +1,123 @@
+{
+  "title": "Subject selector",
+  "lead": "Pick six subjects with HL/SL and see instantly whether the combination is valid, meets the diploma requirements, meets New Zealand UE, and keeps your target pathways open.",
+  "stepper": {
+    "label": "Wizard steps"
+  },
+  "level": {
+    "label": "Level"
+  },
+  "severity": {
+    "high": "Important",
+    "medium": "Consider",
+    "low": "Note"
+  },
+  "step1": {
+    "tab": "Background",
+    "school": "School",
+    "schoolAny": "Other / not listed",
+    "schoolHint": "Choosing a school filters the subject list when we know what it offers. Verify with the school and the official IB directory.",
+    "dpStartYear": "Year the student starts the DP",
+    "dpStartYearHint": "Used to tell you which syllabus applies - see Curriculum updates.",
+    "pathways": "Target pathways",
+    "universities": "Target universities",
+    "nativeLanguage": "Is English the student's best language?",
+    "native": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "examSession": "Examination session",
+    "examSessionHint": "New Zealand schools typically sit the November session in Year 13; most northern-hemisphere schools sit May. This decides which syllabus applies - confirm it with the school.",
+    "session": {
+      "may": "May",
+      "november": "November"
+    }
+  },
+  "step2": {
+    "tab": "Subjects",
+    "slot6": "Group 6 or a second subject from Groups 1-4",
+    "covers": "covers groups {{groups}}"
+  },
+  "step3": {
+    "tab": "Checks",
+    "allClear": "Valid combination, no warnings",
+    "valid": "Valid",
+    "invalid": "Not valid",
+    "errorsTitle": "Structure problems",
+    "warningsTitle": "Warnings",
+    "ueTitle": "New Zealand UE (literacy & numeracy)",
+    "ueLiteracy": "Literacy",
+    "ueNumeracy": "Numeracy",
+    "pathwayTitle": "Target pathways"
+  },
+  "step4": {
+    "tab": "Simulator",
+    "safe": "Safe case",
+    "best": "Best case",
+    "gradesTitle": "Predicted grades",
+    "conditionsTitle": "Diploma conditions (safe case)",
+    "cas": "CAS complete",
+    "breakdown": "Subjects {{subjects}} + TOK/EE {{core}}",
+    "defaultGradeHint": "Subjects with no predicted grade are estimated at 4.",
+    "status": {
+      "pass": "Meets the conditions checked here",
+      "fail": "Fails at least one condition",
+      "indeterminate": "Cannot be decided ({{passMark}} is the pass mark)",
+      "incomplete": "Not a complete diploma yet ({{count}} of {{required}} subjects)"
+    },
+    "condition": {
+      "passed": "OK",
+      "failed": "Fails",
+      "unverified": "To be verified"
+    }
+  },
+  "step5": {
+    "tab": "Summary",
+    "title": "Plan summary",
+    "ueMet": "NZ UE literacy & numeracy met",
+    "ueNotMet": "NZ UE literacy/numeracy not met",
+    "warningCount": "{{count}} warning(s)",
+    "pathwayOpen": "{{open}}/{{total}} pathways meet the generic guidance",
+    "print": "Print / PDF",
+    "share": "Copy share link",
+    "shareCopied": "Link copied.",
+    "shareManual": "Copy this link:",
+    "save": "Save plan",
+    "saveLabel": "Plan name",
+    "savedCount": "{{count}} saved plan(s)",
+    "untitled": "Untitled plan"
+  },
+  "pathways": {
+    "none": "No target pathway selected yet.",
+    "or": " or ",
+    "missingRequired": "Missing required HL: {{subjects}}",
+    "missingRecommended": "Missing recommended HL: {{subjects}}",
+    "met": "Met: {{subjects}}",
+    "meets": "Meets the guidance",
+    "partial": "Partly meets",
+    "not-met": "Does not meet",
+    "guidanceOnly": "These are generic subject-choice guidelines from our data, not admission decisions. Entry routes differ by country, university and programme - for example, New Zealand school leavers enter medicine through a first-year university programme, not directly from school. Always check each university's own page."
+  },
+  "tags": {
+    "science": "any science",
+    "humanities": "any humanities subject",
+    "mathematics": "any mathematics",
+    "arts": "any arts subject"
+  },
+  "errors": {
+    "subject-count": "A diploma needs exactly {{expected}} subjects; you have {{actual}}.",
+    "unknown-subject": "Unknown subject: {{code}}.",
+    "duplicate-subject": "{{code}} is selected twice.",
+    "level-not-offered": "{{code}} is not offered at {{level}}.",
+    "hl-count": "You need 3 or 4 HL subjects; you have {{actual}}.",
+    "math-count": "Exactly one mathematics subject is required; you have {{actual}}.",
+    "group-coverage": "Groups 1-5 must each be covered, and the sixth subject must come from Group 6 or be a valid second subject from Groups 1-4."
+  },
+  "ue": {
+    "ue-literacy": "Missing the UE literacy requirement: English Language A (HL or SL), or English Language B (HL).",
+    "ue-numeracy": "Missing the UE numeracy requirement: any mathematics subject."
+  },
+  "diploma": {
+    "indeterminate": "Some official thresholds are still marked as to be verified, so the result cannot be decided yet."
+  }
+}

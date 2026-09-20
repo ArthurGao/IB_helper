@@ -64,3 +64,51 @@ body {
   outline: 2px solid var(--color-brand);
   outline-offset: 2px;
 }
+
+/* 打印：去掉导航与交互控件，正文铺满，保证方案卡可以直接打印/存 PDF。 */
+@media print {
+  header nav,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  :root {
+    --color-surface: #ffffff;
+    --color-surface-raised: #ffffff;
+    --color-ink: #000000;
+    --color-ink-muted: #333333;
+    --color-border: #999999;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  main {
+    max-width: none;
+    padding: 0;
+  }
+
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.75em;
+    color: #555;
+  }
+}
+
+/* 键盘用户的跳转链接：聚焦时才出现。 */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  position: static;
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  background: var(--color-brand);
+  color: var(--color-brand-ink);
+}

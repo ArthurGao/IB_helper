@@ -37,6 +37,8 @@ export interface Subject {
   satisfiesGroups?: GroupId[]
   mathType?: MathType
   tags?: string[]
+  /** 面向用户的补充说明，例如该科目将被新大纲课程取代。 */
+  note?: L10n
   _verify?: VerifyNote
 }
 
@@ -102,16 +104,22 @@ export interface Selection {
 
 export type Severity = 'high' | 'medium' | 'low'
 
-export interface LocalizedMsg {
+/**
+ * 引擎产出的消息。结构性错误只给 `id`（+ 可选 params），由 UI 用
+ * locales 下的 selector 命名空间翻译——避免在引擎里硬编码中/英文案。
+ * 数据驱动的文案（警告规则）则直接带 JSON 里的双语 `msg`。
+ */
+export interface RuleMessage {
   id: string
-  msg: L10n
+  params?: Record<string, string | number>
+  msg?: L10n
   severity?: Severity
 }
 
 /** 7.1 validateStructure */
 export interface StructureResult {
   valid: boolean
-  errors: LocalizedMsg[]
+  errors: RuleMessage[]
 }
 
 /** 科目成绩：1–7，或 N（未提交）。 */
@@ -157,6 +165,8 @@ export interface DiplomaCondition {
 export interface DiplomaRules extends DataFileMeta {
   maxPoints: number
   passMark: number
+  /** 文凭要求的科目数；条件判定以此为前提。 */
+  requiredSubjectCount: number
   conditions: DiplomaCondition[]
 }
 
@@ -171,8 +181,11 @@ export interface ConditionResult {
 }
 
 export interface DiplomaResult {
-  /** 三态：未核实的阈值/矩阵不会被当成「通过」或「不及格」。 */
-  status: 'pass' | 'fail' | 'indeterminate'
+  /**
+   * 四态。除了「未核实不当成通过/不及格」之外，还要把「科目数不对」单独拎出来：
+   * 官方失败条件默认考生注册了 6 门课，拿 5 门课去套条件会得出「通过」这种荒谬结论。
+   */
+  status: 'pass' | 'fail' | 'indeterminate' | 'incomplete'
   passed: boolean
   conditions: ConditionResult[]
   /** 6 门科目分之和（含 N 时为 null）。 */
@@ -192,6 +205,8 @@ export type TokEeCell = number | 'FAIL' | null
 export interface TokEeMatrix extends DataFileMeta {
   /** matrix[TOK 成绩][EE 成绩] */
   matrix: Record<string, Record<string, TokEeCell>>
+  /** 矩阵判定为失败时展示的双语文案。 */
+  failMsg: L10n
 }
 
 /** 7.3 getWarnings：规则的 when 条件。新增规则只改 JSON，不改代码。 */
@@ -239,8 +254,12 @@ export interface Warning {
   msg: L10n
 }
 
-/** 7.4 matchPathways */
-export type PathwayStatus = 'open' | 'at-risk' | 'closed'
+/**
+ * 7.4 matchPathways。
+ * 刻意不用 open / closed 这类措辞：本工具比对的是 pathways.json 里的**通用选课建议**，
+ * 不是任何一所大学的录取判定（例如新西兰的医学根本不是高中直申）。
+ */
+export type PathwayStatus = 'meets' | 'partial' | 'not-met'
 
 export interface PathwayMatch {
   pathwayId: string
@@ -258,5 +277,81 @@ export interface NZUEResult {
   ueLiteracy: boolean
   ueNumeracy: boolean
   ueLiteracyNumeracy: boolean
-  missing: LocalizedMsg[]
+  /** 缺项：`ue-literacy` / `ue-numeracy`，由 UI 翻译。 */
+  missing: RuleMessage[]
+}
+
+/** /updates 课程改革时间线（规格 9.6）。 */
+export interface CurriculumUpdate {
+  id: string
+  name: L10n
+  subjectCodes: string[]
+  firstTeaching: number | null
+  firstExams: number | null
+  note: L10n
+}
+
+/* ------------------------------------------------------------------ */
+/* 数据文件的整体形状                                                   */
+/* ------------------------------------------------------------------ */
+
+export interface SubjectsFile extends DataFileMeta {
+  subjects: Subject[]
+}
+export interface GroupsFile extends DataFileMeta {
+  groups: SubjectGroup[]
+}
+export interface PathwaysFile extends DataFileMeta {
+  pathways: Pathway[]
+}
+export interface UniversitiesFile extends DataFileMeta {
+  universities: University[]
+}
+export interface SchoolsFile extends DataFileMeta {
+  schools: School[]
+}
+export interface CurriculumUpdatesFile extends DataFileMeta {
+  updates: CurriculumUpdate[]
+}
+
+/* ------------------------------------------------------------------ */
+/* 方案（Plan）：选课 + 背景 + 模拟成绩                                  */
+/* ------------------------------------------------------------------ */
+
+/** 两档情景：safe = 保底，best = 冲刺。 */
+export type Scenario = 'safe' | 'best'
+
+/**
+ * IB 有 5 月与 11 月两个考试 session。北半球多为 5 月（入学年 + 2），
+ * 新西兰等南半球学校多在 Year 13 的 11 月考（入学年 + 1）——差一年会把新旧大纲判错，
+ * 所以这个值由用户选择，不做推测。
+ */
+export type ExamSession = 'may' | 'november'
+
+/** 选课「槽位」：Group 1–5 对应本组，槽位 6 可放 Group 6 或 Group 1–4 的第二门。 */
+export interface SlotPick extends SelectedSubject {
+  slot: GroupId
+}
+
+export interface Plan {
+  subjects: SelectedSubject[]
+  /** UI 输入层的槽位记录；引擎只看 subjects。 */
+  slots: SlotPick[]
+  schoolId?: string
+  targetPathwayIds: string[]
+  targetUniversityIds: string[]
+  dpStartYear?: number
+  examSession?: ExamSession
+  nativeLanguageIsEnglish?: boolean
+  /** 科目 code → 预估分；两档情景各一份。 */
+  grades: Record<Scenario, Record<string, SubjectGrade>>
+  tok: CoreGrade
+  ee: CoreGrade
+  casComplete: boolean
+}
+
+export interface SavedPlan extends Plan {
+  id: string
+  name: string
+  savedAt: string
 }

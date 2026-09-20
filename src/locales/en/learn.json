@@ -1,0 +1,87 @@
+{
+  "title": "How the IB fits together",
+  "lead": "PYP to MYP to DP: what happens in each year, the six subject groups, the core, and how points are awarded.",
+  "timeline": {
+    "title": "Year 9 to Year 12",
+    "y9": {
+      "title": "Year 9 - MYP year 4",
+      "body": "No HL/SL yet. This is the foundation year: build study habits and keep language and mathematics strong."
+    },
+    "y10": {
+      "title": "Year 10 - MYP year 5",
+      "body": "The Personal Project year, and the year the DP subject choice is actually made. This is when this tool is most useful."
+    },
+    "y11": {
+      "title": "Year 11 - DP1",
+      "body": "All six subjects start, along with TOK, the Extended Essay and CAS."
+    },
+    "y12": {
+      "title": "Year 12 - DP2",
+      "body": "Finish the Extended Essay and CAS; sit the May examinations."
+    }
+  },
+  "groups": {
+    "title": "The six subject groups",
+    "showSubjects": "Show {{count}} subject(s) in our data"
+  },
+  "core": {
+    "title": "The core: TOK, EE, CAS",
+    "tok": {
+      "title": "TOK (Theory of Knowledge)",
+      "body": "A course about how we know what we know. Graded A-E and, together with the Extended Essay, worth up to 3 additional points."
+    },
+    "ee": {
+      "title": "EE (Extended Essay)",
+      "body": "An independent research essay. Graded A-E and, together with TOK, worth up to 3 additional points."
+    },
+    "cas": {
+      "title": "CAS (Creativity, Activity, Service)",
+      "body": "Not graded, but it must be completed - an incomplete CAS means no diploma."
+    }
+  },
+  "scoring": {
+    "title": "Scoring",
+    "body": "6 subjects x 7 points = 42, plus up to 3 points from TOK and the Extended Essay: {{max}} maximum, {{pass}} to pass.",
+    "source": "Thresholds come from diploma-rules.json (last verified {{date}}) and are still marked as to be verified against the official IB documents."
+  },
+  "considerations": {
+    "title": "Things to consider before choosing",
+    "lead": "Workload, language choices, mathematics AA vs AI, and keeping doors open.",
+    "search": "Search the cards",
+    "noResults": "No card matches that search."
+  },
+  "cards": {
+    "math-aa-vs-ai": {
+      "title": "Mathematics: AA or AI?",
+      "body": "AA leans towards pure mathematics and proof; AI leans towards modelling and applications. Most engineering, computer science, physical science and economics programmes expect AA - check each target programme's own page before deciding."
+    },
+    "language-choice": {
+      "title": "Which language goes in Group 1?",
+      "body": "Group 1 is the student's best language, Group 2 is an additional language. If English is not the student's strongest language, putting the home language in Group 1 is often the steadier route. Note that New Zealand UE literacy needs English Language A (HL/SL) or English Language B (HL)."
+    },
+    "hl-workload": {
+      "title": "How heavy are three HLs?",
+      "body": "Three HL subjects is the minimum and four is the maximum. Three heavy HLs (for example Mathematics AA, Physics and Chemistry) is a real workload - weigh it against the student's other commitments."
+    },
+    "keep-doors-open": {
+      "title": "Keeping doors open",
+      "body": "If the direction is still undecided, a balanced combination that includes HL Mathematics keeps the most pathways available. Dropping a science or mathematics to HL-free can close medicine and engineering later."
+    },
+    "group6-swap": {
+      "title": "Replacing Group 6",
+      "body": "The arts subject can be replaced by a second subject from Groups 1-4. Interdisciplinary subjects also exist: ESS satisfies Groups 3 and 4 at once, and Literature and Performance satisfies Groups 1 and 6."
+    },
+    "school-offer": {
+      "title": "What the school actually offers",
+      "body": "A subject existing in the IB curriculum does not mean your school teaches it, and timetable blocks can rule out otherwise legal combinations. Confirm with the school's IB coordinator."
+    },
+    "ee-cas-timing": {
+      "title": "When EE and CAS happen",
+      "body": "The Extended Essay topic is usually chosen in DP1 and finished in DP2; CAS runs across both years and must be completed for the diploma to be awarded."
+    },
+    "changing-later": {
+      "title": "Changing subjects later",
+      "body": "Changes are possible early in DP1 but get progressively harder, which is why the Year 10 decision matters so much. Talk to the IB coordinator as early as possible."
+    }
+  }
+}

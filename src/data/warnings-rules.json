@@ -1,0 +1,90 @@
+{
+  "lastVerified": "2026-09-20",
+  "sourceUrl": "https://www.ibo.org/university-admission/",
+  "_verify": {
+    "status": "unverified",
+    "sourceUrl": "https://www.ibo.org/university-admission/",
+    "note": {
+      "en": "TODO verify: warning texts seeded from spec sections 4.4 and 7.3. They are planning guidance, not admission rules; always defer to the school's IB coordinator and the university's official page.",
+      "zh": "待核实：警告文案来自规格第 4.4 与 7.3 节。这些是规划提示而非录取规则；一律以学校 IB 协调员与大学官网为准。"
+    }
+  },
+  "rules": [
+    {
+      "id": "math-ai-for-stem",
+      "when": {
+        "targetPathwayIn": [
+          "engineering",
+          "cs",
+          "science",
+          "business-economics"
+        ],
+        "mathCourse": "AI"
+      },
+      "severity": "high",
+      "msg": {
+        "en": "Most STEM and economics programmes expect Mathematics: Analysis and Approaches (AA) rather than Applications and Interpretation (AI). Check each target programme's own page.",
+        "zh": "多数理工/经济专业要求数学 AA（分析与方法）而非 AI（应用与解释）。请逐个查看目标专业官网。"
+      }
+    },
+    {
+      "id": "heavy-hl-load",
+      "when": {
+        "hlCountIn": [
+          3
+        ],
+        "hlSubjectsAll": [
+          "math-aa",
+          "physics",
+          "chemistry"
+        ]
+      },
+      "severity": "medium",
+      "msg": {
+        "en": "HL Mathematics AA + Physics + Chemistry is a heavy workload. Make sure the student has the time and support for it.",
+        "zh": "HL 数学 AA + 物理 + 化学 是很重的工作量，请确认孩子有足够时间与支持。"
+      }
+    },
+    {
+      "id": "medicine-hl-guidance",
+      "when": {
+        "targetPathwayIn": [
+          "medicine"
+        ],
+        "missingHlAny": [
+          "chemistry",
+          "biology"
+        ]
+      },
+      "severity": "high",
+      "msg": {
+        "en": "For medicine, the common subject guidance is HL Chemistry plus HL Biology, and this combination does not have both. This is generic guidance, not an admission decision - in New Zealand, entry to medicine is through a first-year university programme rather than directly from school.",
+        "zh": "医学方向的通用选课建议是 HL 化学 + HL 生物，当前组合没有同时包含。这是通用参考而非录取判定——在新西兰，医学是通过大学一年级课程入读，而不是高中直申。"
+      }
+    },
+    {
+      "id": "english-in-group-1-for-non-native",
+      "when": {
+        "nativeLanguageIsEnglish": false,
+        "englishInGroup1": true
+      },
+      "severity": "medium",
+      "msg": {
+        "en": "For a student whose best language is not English, taking English in Group 1 and the home language in Group 2 is usually the harder way round. The reverse is often safer - discuss it with the IB coordinator.",
+        "zh": "母语不是英语时，把英语放 Group 1、母语放 Group 2 通常更吃力，反过来往往更稳——请与学校 IB 协调员讨论。"
+      }
+    },
+    {
+      "id": "nz-ue-not-met",
+      "when": {
+        "structureValid": true,
+        "ueLiteracyNumeracy": false
+      },
+      "severity": "high",
+      "msg": {
+        "en": "This combination is a valid IB structure but does not meet the New Zealand UE literacy/numeracy requirement (English Language A at HL/SL, or English Language B at HL, plus any Mathematics).",
+        "zh": "该组合是合法的 IB 结构，但不满足新西兰 UE 读写/算术要求（英语 Language A 的 HL/SL，或英语 Language B 的 HL，+ 任一数学）。"
+      }
+    }
+  ]
+}

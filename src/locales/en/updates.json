@@ -1,0 +1,20 @@
+{
+  "title": "Curriculum updates",
+  "lead": "IB subjects are being rewritten in waves. Enter the year your child starts the DP and we will flag which syllabus each subject falls under.",
+  "dpStartYear": "Year the student starts the DP",
+  "examYear": "Estimated examination year: {{year}} ({{session}} session).",
+  "firstTeaching": "First taught",
+  "firstExams": "First examined",
+  "verdict": {
+    "new": "New syllabus",
+    "old": "Previous syllabus",
+    "unknown": "Enter a DP start year and pick a session",
+    "not-announced": "First examination year not confirmed in our data"
+  },
+  "session": {
+    "label": "Examination session",
+    "may": "May",
+    "november": "November",
+    "hint": "IB has two sessions. Northern-hemisphere schools usually sit the May session two years after starting the DP; New Zealand schools typically sit the November session in Year 13, one year after starting. Confirm which one your school uses."
+  }
+}

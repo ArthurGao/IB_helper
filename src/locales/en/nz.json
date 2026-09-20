@@ -1,0 +1,21 @@
+{
+  "title": "New Zealand",
+  "lead": "University Entrance rules, schools offering IB, and where NZ IB students go next.",
+  "ue": {
+    "title": "University Entrance (UE)",
+    "body": "A full IB Diploma with at least 24 points meets University Entrance at every New Zealand university. Students studying in New Zealand must also meet literacy (English Language A at HL/SL, or English Language B at HL) and numeracy (any mathematics)."
+  },
+  "universities": {
+    "title": "New Zealand universities",
+    "minPoints": "IB {{points}} points",
+    "note": "24 points plus a full diploma is the entrance threshold only. Individual programmes such as medicine, engineering and law set higher points, subject and interview requirements - always check the university's own page."
+  },
+  "schools": {
+    "title": "Schools offering IB",
+    "verifyHint": "Schools start and stop programmes, so this list can go out of date.",
+    "directory": "Find an IB World School",
+    "city": "City",
+    "programme": "Programme",
+    "all": "All"
+  }
+}

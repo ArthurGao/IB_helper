@@ -1,0 +1,26 @@
+{
+  "title": "术语表与家长 FAQ",
+  "lead": "HL、SL、TOK、EE、CAS、AA、AI、文凭 vs 课程证书——用大白话解释。",
+  "search": "搜索术语与问题",
+  "termsTitle": "术语",
+  "faqTitle": "家长 FAQ",
+  "noResults": "没有匹配的内容。",
+  "terms": {
+    "hl-sl": { "term": "HL / SL", "body": "高级课程与标准课程。文凭需要 3 或 4 门 HL，其余为 SL；HL 课时更多、深度更大。" },
+    "tok": { "term": "TOK（知识论）", "body": "Core 课程之一，讨论知识是如何建立的。评 A–E。" },
+    "ee": { "term": "EE（拓展论文）", "body": "学生自选学科的独立研究论文。评 A–E。" },
+    "cas": { "term": "CAS", "body": "创造、行动、服务。不计分，但必须完成。" },
+    "aa-ai": { "term": "数学 AA / AI", "body": "AA 偏纯数与证明；AI 偏建模与真实数据。两者都有 HL 与 SL。" },
+    "diploma-vs-course": { "term": "文凭 vs 课程证书", "body": "未满足文凭条件的学生仍可获得单科证书（course results），这与完整文凭是不同的结果。" },
+    "ue": { "term": "UE（University Entrance）", "body": "新西兰大学的最低入学标准。对 IB 学生而言是完整文凭 + 至少 24 分；在 NZ 境内就读还需满足读写与算术。" },
+    "myp-dp": { "term": "MYP / DP", "body": "MYP 大致覆盖 6–10 年级，DP 是 11–12 年级。DP 选课在 10 年级决定。" }
+  },
+  "faq": {
+    "when-to-choose": { "q": "到底什么时候选课？", "a": "10 年级，也就是 MYP 最后一年。这也是本工具聚焦的决策点。" },
+    "how-many-hl": { "q": "必须选几门 HL？", "a": "3 或 4 门，其余为 SL，共 6 门。" },
+    "can-change": { "q": "DP 开始后还能换课吗？", "a": "DP1 早期有时可以，但很快就会变难，还受排课限制。若在考虑，请立刻找 IB 协调员。" },
+    "what-if-fail": { "q": "没拿到文凭会怎样？", "a": "仍可获得单科课程证书（course results）。请与学校沟通这对你们目标申请意味着什么。" },
+    "which-math": { "q": "AA 还是 AI？", "a": "取决于目标专业。多数理工与经济类要求 AA。请逐个核对目标专业的要求。" },
+    "nz-vs-overseas": { "q": "这套方案对海外大学也适用吗？", "a": "文凭结构一样，但各国各校要求不同。方向匹配只是起点，请到各大学官网核实。" }
+  }
+}

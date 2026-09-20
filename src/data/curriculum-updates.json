@@ -1,0 +1,96 @@
+{
+  "lastVerified": "2026-09-20",
+  "sourceUrl": "https://www.ibo.org/university-admission/latest-curriculum-updates/",
+  "_verify": {
+    "status": "verified",
+    "sourceUrl": "https://www.ibo.org/university-admission/latest-curriculum-updates/",
+    "note": {
+      "en": "Verified 2026-09-20 against the official IB 'Read curriculum updates' page, which lists one block per first-teaching cycle (2024 -> first assessment May 2026; 2025 -> May 2027; 2026 -> May 2028; 2027 -> May 2029) with the subjects in each. The sciences entry below is NOT on that page (it only covers 2024 onwards) and stays marked unverified.",
+      "zh": "2026-09-20 对照 IB 官方「Read curriculum updates」页面核实：该页按首教年份分块（2024 → 2026 年 5 月首考；2025 → 2027；2026 → 2028；2027 → 2029），并列出各自科目。下方理科那条不在该页上（该页只覆盖 2024 年起的周期），仍标记为待核实。"
+    }
+  },
+  "updates": [
+    {
+      "id": "sciences-2025",
+      "name": { "en": "Sciences (Physics, Chemistry, Biology)", "zh": "理科（物理、化学、生物）" },
+      "subjectCodes": ["physics", "chemistry", "biology"],
+      "firstTeaching": 2023,
+      "firstExams": 2025,
+      "note": {
+        "en": "New syllabus first taught 2023, first examined May 2025.",
+        "zh": "新大纲 2023 年首教，2025 年 5 月首考。"
+      },
+      "_verify": {
+        "status": "unverified",
+        "sourceUrl": "https://www.ibo.org/university-admission/latest-curriculum-updates/",
+        "note": {
+          "en": "TODO verify: taken from the project spec. The official updates page now only lists cycles from 2024 onwards, so this past cycle could not be confirmed there.",
+          "zh": "待核实：来自项目规格。官方更新页现在只列 2024 年起的周期，这一已过去的周期无法在该页确认。"
+        }
+      }
+    },
+    {
+      "id": "first-teaching-2024",
+      "name": {
+        "en": "First teaching 2024: ESS, Global Politics, SEHS",
+        "zh": "2024 首教：ESS、全球政治、SEHS"
+      },
+      "subjectCodes": ["ess", "global-politics", "sehs"],
+      "firstTeaching": 2024,
+      "firstExams": 2026,
+      "note": {
+        "en": "First taught August/September 2024, first assessment May 2026. The new ESS is offered at both SL and HL.",
+        "zh": "2024 年 8/9 月首教，2026 年 5 月首次评估。新版 ESS 同时提供 SL 与 HL。"
+      }
+    },
+    {
+      "id": "first-teaching-2025",
+      "name": {
+        "en": "First teaching 2025: Computer Science, Design Technology, Psychology, Visual Arts, Extended Essay",
+        "zh": "2025 首教：计算机科学、设计技术、心理学、视觉艺术、拓展论文（EE）"
+      },
+      "subjectCodes": ["computer-science", "design-technology", "psychology", "visual-arts"],
+      "firstTeaching": 2025,
+      "firstExams": 2027,
+      "note": {
+        "en": "First taught August/September 2025, first assessment May 2027. The DP extended essay and the CP core components are updated in the same cycle.",
+        "zh": "2025 年 8/9 月首教，2027 年 5 月首次评估。DP 拓展论文（EE）与 CP core 也在同一周期更新。"
+      }
+    },
+    {
+      "id": "first-teaching-2026",
+      "name": { "en": "First teaching 2026: History", "zh": "2026 首教：历史" },
+      "subjectCodes": ["history"],
+      "firstTeaching": 2026,
+      "firstExams": 2028,
+      "note": {
+        "en": "First taught August/September 2026, first assessment May 2028.",
+        "zh": "2026 年 8/9 月首教，2028 年 5 月首次评估。"
+      }
+    },
+    {
+      "id": "first-teaching-2027",
+      "name": {
+        "en": "First teaching 2027: Mathematics AA/AI, Language B, Language ab initio, Dance, Religion and Society",
+        "zh": "2027 首教：数学 AA/AI、Language B、Language ab initio、舞蹈、宗教与社会"
+      },
+      "subjectCodes": [
+        "math-aa",
+        "math-ai",
+        "english-b",
+        "mandarin-b",
+        "spanish-b",
+        "french-b",
+        "language-ab-initio",
+        "dance",
+        "world-religions"
+      ],
+      "firstTeaching": 2027,
+      "firstExams": 2029,
+      "note": {
+        "en": "First taught August/September 2027, first assessment May 2029. 'Religion and society' is the updated course that replaces world religions in this cycle.",
+        "zh": "2027 年 8/9 月首教，2029 年 5 月首次评估。本轮中「宗教与社会（Religion and society）」为取代 world religions 的更新课程。"
+      }
+    }
+  ]
+}

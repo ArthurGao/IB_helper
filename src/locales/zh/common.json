@@ -1,0 +1,41 @@
+{
+  "appName": "IB 选课助手",
+  "appTagline": "看懂 IB、模拟选课、校验文凭与目标大学方向。",
+  "nav": {
+    "home": "首页",
+    "learn": "IB 课程",
+    "considerations": "选课注意事项",
+    "selector": "选课工具",
+    "compare": "方案对比",
+    "nz": "新西兰专区",
+    "glossary": "术语与 FAQ",
+    "updates": "课程改革"
+  },
+  "language": {
+    "label": "语言",
+    "zh": "中文",
+    "en": "English"
+  },
+  "theme": {
+    "label": "主题",
+    "light": "浅色",
+    "dark": "深色"
+  },
+  "disclaimer": {
+    "title": "重要提示",
+    "body": "本工具仅供家庭规划参考，不构成升学或课程建议。IB 课程结构、评分与失败条件以国际文凭组织（ibo.org）现行官方文件为准；各大学与各专业录取要求以其官网为准；学校开设科目与项目以学校及 IB 官方「Find an IB World School」目录为准。选课前请务必咨询学校的 IB 协调员。"
+  },
+  "data": {
+    "lastVerified": "最后核实：{{date}}",
+    "source": "来源",
+    "unverified": "待核实"
+  },
+  "status": {
+    "comingSoon": "该页面将在后续里程碑完成。"
+  },
+  "skipToContent": "跳到主要内容",
+  "home": {
+    "timeline": "从 9 年级到拿到文凭",
+    "scoring": "6 门 × 7 分 + Core 最多 3 分 = 满分 {{max}}，及格 {{pass}}。"
+  }
+}

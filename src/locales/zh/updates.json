@@ -1,0 +1,20 @@
+{
+  "title": "课程改革时间线",
+  "lead": "IB 各科目分批改版。填入孩子进入 DP 的年份，这里会提示每一科考哪套大纲。",
+  "dpStartYear": "进入 DP 的年份",
+  "examYear": "预计考试年份：{{year}}（{{session}} session）。",
+  "firstTeaching": "首教",
+  "firstExams": "首考",
+  "verdict": {
+    "new": "新大纲",
+    "old": "旧大纲",
+    "unknown": "请填入 DP 入学年份并选择考试 session",
+    "not-announced": "数据中尚无首考年份"
+  },
+  "session": {
+    "label": "考试 session",
+    "may": "5 月",
+    "november": "11 月",
+    "hint": "IB 有 5 月与 11 月两个考试 session。北半球学校通常是进入 DP 后第二年的 5 月；新西兰学校通常在 Year 13 的 11 月考，即入学后一年。请与学校确认用哪一个。"
+  }
+}

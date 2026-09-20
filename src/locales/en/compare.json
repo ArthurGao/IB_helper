@@ -1,0 +1,15 @@
+{
+  "title": "Compare plans",
+  "lead": "Put up to {{max}} saved plans side by side.",
+  "empty": "No saved plans yet. Save one from the last step of the subject selector.",
+  "field": "Field",
+  "subjects": "Subjects",
+  "valid": "Valid structure",
+  "total": "Simulated total (safe case)",
+  "ue": "NZ UE literacy & numeracy",
+  "pathways": "Pathways open",
+  "warnings": "Warnings",
+  "delete": "Delete plan",
+  "yes": "Yes",
+  "no": "No"
+}

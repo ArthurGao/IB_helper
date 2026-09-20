@@ -1,0 +1,123 @@
+{
+  "title": "选课工具",
+  "lead": "选 6 门课并标注 HL/SL，实时看到组合是否合法、是否满足文凭要求、是否满足新西兰 UE、是否保住目标方向。",
+  "stepper": {
+    "label": "向导步骤"
+  },
+  "level": {
+    "label": "层级"
+  },
+  "severity": {
+    "high": "重要",
+    "medium": "注意",
+    "low": "提示"
+  },
+  "step1": {
+    "tab": "背景",
+    "school": "所在学校",
+    "schoolAny": "通用 / 其它",
+    "schoolHint": "已知该校开设科目时会据此过滤；请以学校与 IB 官方目录为准。",
+    "dpStartYear": "进入 DP 的年份",
+    "dpStartYearHint": "用于提示考哪套大纲——见「课程改革」页。",
+    "pathways": "目标专业方向",
+    "universities": "目标大学",
+    "nativeLanguage": "英语是孩子的最强语言吗？",
+    "native": {
+      "yes": "是",
+      "no": "否"
+    },
+    "examSession": "考试 session",
+    "examSessionHint": "新西兰学校通常在 Year 13 的 11 月考；北半球多数学校是 5 月。这会决定考哪套大纲——请与学校确认。",
+    "session": {
+      "may": "5 月",
+      "november": "11 月"
+    }
+  },
+  "step2": {
+    "tab": "逐组选课",
+    "slot6": "Group 6，或 Group 1–4 的第二门",
+    "covers": "同时顶 Group {{groups}}"
+  },
+  "step3": {
+    "tab": "实时校验",
+    "allClear": "组合合法，暂无警告",
+    "valid": "合法",
+    "invalid": "不合法",
+    "errorsTitle": "结构问题",
+    "warningsTitle": "警告",
+    "ueTitle": "新西兰 UE（读写 / 算术）",
+    "ueLiteracy": "读写",
+    "ueNumeracy": "算术",
+    "pathwayTitle": "目标方向匹配"
+  },
+  "step4": {
+    "tab": "分数模拟",
+    "safe": "保底",
+    "best": "冲刺",
+    "gradesTitle": "预估分数",
+    "conditionsTitle": "文凭条件逐条检查（保底档）",
+    "cas": "CAS 已完成",
+    "breakdown": "科目 {{subjects}} + TOK/EE {{core}}",
+    "defaultGradeHint": "未填预估分的科目按 4 分估算。",
+    "status": {
+      "pass": "满足此处检查的条件",
+      "fail": "至少一条条件不满足",
+      "indeterminate": "暂无法判定（及格线 {{passMark}}）",
+      "incomplete": "尚未选满 6 门，无法判定（当前 {{count}} / {{required}} 门）"
+    },
+    "condition": {
+      "passed": "通过",
+      "failed": "不满足",
+      "unverified": "待核实"
+    }
+  },
+  "step5": {
+    "tab": "结果总览",
+    "title": "方案总览",
+    "ueMet": "满足 NZ UE 读写与算术",
+    "ueNotMet": "未满足 NZ UE 读写/算术",
+    "warningCount": "{{count}} 条警告",
+    "pathwayOpen": "{{open}}/{{total}} 个方向符合通用建议",
+    "print": "打印 / 导出 PDF",
+    "share": "复制分享链接",
+    "shareCopied": "链接已复制。",
+    "shareManual": "请复制此链接：",
+    "save": "保存方案",
+    "saveLabel": "方案名称",
+    "savedCount": "已保存 {{count}} 套方案",
+    "untitled": "未命名方案"
+  },
+  "pathways": {
+    "none": "尚未选择目标方向。",
+    "or": " 或 ",
+    "missingRequired": "缺必需 HL：{{subjects}}",
+    "missingRecommended": "缺推荐 HL：{{subjects}}",
+    "met": "已满足：{{subjects}}",
+    "meets": "符合建议",
+    "partial": "部分符合",
+    "not-met": "不符合建议",
+    "guidanceOnly": "这些是本工具数据里的「通用选课参考」，不是录取判定。各国、各校、各专业入口不同——例如新西兰高中毕业生是通过大学一年级课程入读医学，而非高中直申。请务必查看各大学官网。"
+  },
+  "tags": {
+    "science": "任一理科",
+    "humanities": "任一人文科目",
+    "mathematics": "任一数学",
+    "arts": "任一艺术科目"
+  },
+  "errors": {
+    "subject-count": "文凭需要恰好 {{expected}} 门课，当前 {{actual}} 门。",
+    "unknown-subject": "未知科目：{{code}}。",
+    "duplicate-subject": "{{code}} 被重复选择。",
+    "level-not-offered": "{{code}} 不提供 {{level}} 层级。",
+    "hl-count": "需要 3 或 4 门 HL，当前 {{actual}} 门。",
+    "math-count": "必须且只能选一门数学，当前 {{actual}} 门。",
+    "group-coverage": "Group 1–5 每组都要覆盖，第 6 门须来自 Group 6，或为 Group 1–4 的合规第二门。"
+  },
+  "ue": {
+    "ue-literacy": "未满足 UE 读写要求：英语 Language A（HL 或 SL），或英语 Language B（HL）。",
+    "ue-numeracy": "未满足 UE 算术要求：任一数学科目。"
+  },
+  "diploma": {
+    "indeterminate": "部分官方阈值仍标记为待核实，因此暂时无法给出判定。"
+  }
+}

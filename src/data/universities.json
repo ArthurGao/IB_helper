@@ -1,0 +1,166 @@
+{
+  "lastVerified": "2026-09-20",
+  "sourceUrl": "https://www.ibo.org/university-admission/",
+  "_verify": {
+    "status": "unverified",
+    "sourceUrl": "https://www.ibo.org/university-admission/",
+    "note": {
+      "en": "TODO verify: seeded from spec section 9.2. All NZ universities: full IB Diploma + 24 points = University Entrance. Individual programmes (medicine, engineering, law) set higher points/subject/interview requirements - always link out to the official page. Only Auckland and Otago have a source named in the spec; the other six carry sourceUrl=null until the official IB admission page is confirmed.",
+      "zh": "待核实：数据来自规格第 9.2 节。所有 NZ 大学：完整 IB 文凭 + 24 分 = University Entrance。具体专业（医学、工程、法律）另有更高分数/科目/面试要求，务必链接到官网。规格中仅奥克兰与奥塔哥给出来源；其余六所 sourceUrl 暂为 null，待补官方 IB 入学页面。"
+    }
+  },
+  "universities": [
+    {
+      "id": "auckland",
+      "name": {
+        "en": "University of Auckland",
+        "zh": "奥克兰大学"
+      },
+      "country": "NZ",
+      "ibMinPoints": 24,
+      "notes": {
+        "en": "UE literacy: English Language A (HL/SL) or English Language B (HL); numeracy: any Mathematics. Note: school leavers cannot apply directly to the MBChB (medicine) - they apply via First Year entry after starting an approved first-year programme.",
+        "zh": "UE 读写：英语 Language A（HL/SL）或英语 Language B（HL）；算术：任一数学。注意：高中毕业生不能直接申请 MBChB（医学），需先入读认可的大学一年级课程后按 First Year entry 申请。"
+      },
+      "sourceUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-medicine-and-bachelor-of-surgery-mbchb.html",
+      "lastVerified": "2026-09-20",
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-medicine-and-bachelor-of-surgery-mbchb.html",
+        "note": {
+          "en": "MBChB entry route verified 2026-09-20: 'School leavers cannot apply directly to the MBChB; they are advised to apply via First Year entry.' The UE line still needs a source of its own.",
+          "zh": "MBChB 入口于 2026-09-20 核实，官方原文：「School leavers cannot apply directly to the MBChB; they are advised to apply via First Year entry.」UE 那句仍需单独来源。"
+        }
+      }
+    },
+    {
+      "id": "aut",
+      "name": {
+        "en": "Auckland University of Technology (AUT)",
+        "zh": "奥克兰理工大学（AUT）"
+      },
+      "country": "NZ",
+      "ibMinPoints": 24,
+      "sourceUrl": null,
+      "lastVerified": "2026-09-20",
+      "_verify": {
+        "status": "unverified",
+        "sourceUrl": null,
+        "note": {
+          "en": "TODO verify: add the official IB admission page URL.",
+          "zh": "待核实：补充官方 IB 入学页面 URL。"
+        }
+      }
+    },
+    {
+      "id": "waikato",
+      "name": {
+        "en": "University of Waikato",
+        "zh": "怀卡托大学"
+      },
+      "country": "NZ",
+      "ibMinPoints": 24,
+      "sourceUrl": null,
+      "lastVerified": "2026-09-20",
+      "_verify": {
+        "status": "unverified",
+        "sourceUrl": null,
+        "note": {
+          "en": "TODO verify: add the official IB admission page URL.",
+          "zh": "待核实：补充官方 IB 入学页面 URL。"
+        }
+      }
+    },
+    {
+      "id": "massey",
+      "name": {
+        "en": "Massey University",
+        "zh": "梅西大学"
+      },
+      "country": "NZ",
+      "ibMinPoints": 24,
+      "sourceUrl": null,
+      "lastVerified": "2026-09-20",
+      "_verify": {
+        "status": "unverified",
+        "sourceUrl": null,
+        "note": {
+          "en": "TODO verify: add the official IB admission page URL.",
+          "zh": "待核实：补充官方 IB 入学页面 URL。"
+        }
+      }
+    },
+    {
+      "id": "vuw",
+      "name": {
+        "en": "Victoria University of Wellington",
+        "zh": "惠灵顿维多利亚大学"
+      },
+      "country": "NZ",
+      "ibMinPoints": 24,
+      "sourceUrl": null,
+      "lastVerified": "2026-09-20",
+      "_verify": {
+        "status": "unverified",
+        "sourceUrl": null,
+        "note": {
+          "en": "TODO verify: add the official IB admission page URL.",
+          "zh": "待核实：补充官方 IB 入学页面 URL。"
+        }
+      }
+    },
+    {
+      "id": "canterbury",
+      "name": {
+        "en": "University of Canterbury",
+        "zh": "坎特伯雷大学"
+      },
+      "country": "NZ",
+      "ibMinPoints": 24,
+      "sourceUrl": null,
+      "lastVerified": "2026-09-20",
+      "_verify": {
+        "status": "unverified",
+        "sourceUrl": null,
+        "note": {
+          "en": "TODO verify: add the official IB admission page URL.",
+          "zh": "待核实：补充官方 IB 入学页面 URL。"
+        }
+      }
+    },
+    {
+      "id": "lincoln",
+      "name": {
+        "en": "Lincoln University",
+        "zh": "林肯大学"
+      },
+      "country": "NZ",
+      "ibMinPoints": 24,
+      "sourceUrl": null,
+      "lastVerified": "2026-09-20",
+      "_verify": {
+        "status": "unverified",
+        "sourceUrl": null,
+        "note": {
+          "en": "TODO verify: add the official IB admission page URL.",
+          "zh": "待核实：补充官方 IB 入学页面 URL。"
+        }
+      }
+    },
+    {
+      "id": "otago",
+      "name": {
+        "en": "University of Otago",
+        "zh": "奥塔哥大学"
+      },
+      "country": "NZ",
+      "ibMinPoints": 24,
+      "notes": {
+        "en": "Studying in NZ: English Language A (HL/SL) or English Language B (HL) plus any Mathematics.",
+        "zh": "NZ 境内就读：英语 Language A（HL/SL）或英语 Language B（HL）+ 任一数学。"
+      },
+      "sourceUrl": "https://www.otago.ac.nz",
+      "lastVerified": "2026-09-20"
+    }
+  ]
+}

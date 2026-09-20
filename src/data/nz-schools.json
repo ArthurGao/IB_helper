@@ -1,0 +1,142 @@
+{
+  "lastVerified": "2026-09-20",
+  "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/",
+  "_verify": {
+    "status": "unverified",
+    "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/",
+    "note": {
+      "en": "TODO verify: seeded from spec section 9.5. Schools open and close programmes (e.g. Auckland International College closed in 2023), so every entry must be re-checked against the official IB 'Find an IB World School' directory. Cities not given in the spec are marked 'to be verified' rather than guessed. offeredSubjectCodes is unknown for every school, so the selector shows all subjects.",
+      "zh": "待核实：数据来自规格第 9.5 节。学校会开设/停办项目（例：Auckland International College 已于 2023 年关闭），每条都需对照 IB 官方「Find an IB World School」目录复核。规格未给出的城市标为「待核实」而非猜测。所有学校的 offeredSubjectCodes 均未知，因此选课工具显示全量科目。"
+    }
+  },
+  "schools": [
+    {
+      "id": "takapuna-grammar",
+      "name": { "en": "Takapuna Grammar School", "zh": "Takapuna Grammar School" },
+      "city": { "en": "Auckland", "zh": "奥克兰" },
+      "programmes": ["DP"],
+      "lastVerified": "2026-09-20",
+      "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/",
+      "_verify": {
+        "status": "unverified",
+        "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/",
+        "note": {
+          "en": "Spec notes this as the first NZ state school to offer IB.",
+          "zh": "规格注明其为 NZ 首所开设 IB 的公立学校。"
+        }
+      }
+    },
+    {
+      "id": "rangitoto-college",
+      "name": { "en": "Rangitoto College", "zh": "Rangitoto College" },
+      "city": { "en": "Auckland", "zh": "奥克兰" },
+      "programmes": ["DP"],
+      "lastVerified": "2026-09-20",
+      "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/"
+    },
+    {
+      "id": "saint-kentigern",
+      "name": { "en": "Saint Kentigern College", "zh": "Saint Kentigern College" },
+      "city": { "en": "Auckland", "zh": "奥克兰" },
+      "programmes": ["DP"],
+      "lastVerified": "2026-09-20",
+      "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/"
+    },
+    {
+      "id": "st-cuthberts",
+      "name": { "en": "St Cuthbert's College", "zh": "St Cuthbert's College" },
+      "city": { "en": "Auckland", "zh": "奥克兰" },
+      "programmes": ["DP"],
+      "lastVerified": "2026-09-20",
+      "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/"
+    },
+    {
+      "id": "kristin-school",
+      "name": { "en": "Kristin School", "zh": "Kristin School" },
+      "city": { "en": "Auckland", "zh": "奥克兰" },
+      "programmes": ["PYP", "MYP", "DP"],
+      "lastVerified": "2026-09-20",
+      "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/"
+    },
+    {
+      "id": "diocesan-school-for-girls",
+      "name": { "en": "Diocesan School for Girls", "zh": "Diocesan School for Girls" },
+      "city": { "en": "Auckland", "zh": "奥克兰" },
+      "programmes": ["PYP", "MYP", "DP"],
+      "lastVerified": "2026-09-20",
+      "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/"
+    },
+    {
+      "id": "glendowie-college",
+      "name": { "en": "Glendowie College", "zh": "Glendowie College" },
+      "city": { "en": "Auckland", "zh": "奥克兰" },
+      "programmes": ["MYP"],
+      "lastVerified": "2026-09-20",
+      "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/"
+    },
+    {
+      "id": "queen-margaret-college",
+      "name": { "en": "Queen Margaret College", "zh": "Queen Margaret College" },
+      "city": { "en": "Wellington", "zh": "惠灵顿" },
+      "programmes": ["PYP", "MYP", "DP"],
+      "lastVerified": "2026-09-20",
+      "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/"
+    },
+    {
+      "id": "scots-college",
+      "name": { "en": "Scots College", "zh": "Scots College" },
+      "city": { "en": "Wellington", "zh": "惠灵顿" },
+      "programmes": ["PYP", "MYP", "DP"],
+      "lastVerified": "2026-09-20",
+      "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/"
+    },
+    {
+      "id": "st-peters-school",
+      "name": { "en": "St Peter's School", "zh": "St Peter's School" },
+      "city": { "en": "To be verified", "zh": "待核实" },
+      "programmes": ["DP"],
+      "lastVerified": "2026-09-20",
+      "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/",
+      "_verify": {
+        "status": "unverified",
+        "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/",
+        "note": {
+          "en": "TODO verify: city not given in the spec; do not guess.",
+          "zh": "待核实：规格未给出城市，不做猜测。"
+        }
+      }
+    },
+    {
+      "id": "st-margarets-college",
+      "name": { "en": "St Margaret's College", "zh": "St Margaret's College" },
+      "city": { "en": "To be verified", "zh": "待核实" },
+      "programmes": ["DP"],
+      "lastVerified": "2026-09-20",
+      "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/",
+      "_verify": {
+        "status": "unverified",
+        "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/",
+        "note": {
+          "en": "TODO verify: city not given in the spec; do not guess.",
+          "zh": "待核实：规格未给出城市，不做猜测。"
+        }
+      }
+    },
+    {
+      "id": "john-mcglashan-college",
+      "name": { "en": "John McGlashan College", "zh": "John McGlashan College" },
+      "city": { "en": "To be verified", "zh": "待核实" },
+      "programmes": ["DP"],
+      "lastVerified": "2026-09-20",
+      "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/",
+      "_verify": {
+        "status": "unverified",
+        "sourceUrl": "https://www.ibo.org/programmes/find-an-ib-school/",
+        "note": {
+          "en": "TODO verify: city not given in the spec; do not guess.",
+          "zh": "待核实：规格未给出城市，不做猜测。"
+        }
+      }
+    }
+  ]
+}

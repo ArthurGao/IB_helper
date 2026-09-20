@@ -1,7 +1,7 @@
-/// <reference types="vitest/config" />
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import { defineConfig } from 'vite'
+// 从 vitest/config 取 defineConfig，这样 `test` 字段有类型。
+import { defineConfig } from 'vitest/config'
 
 // https://vite.dev/config/
 export default defineConfig({

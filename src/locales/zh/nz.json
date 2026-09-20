@@ -1,0 +1,21 @@
+{
+  "title": "新西兰专区",
+  "lead": "University Entrance 规则、开设 IB 的学校，以及 NZ IB 学生的升学去向。",
+  "ue": {
+    "title": "University Entrance（UE）",
+    "body": "完整 IB 文凭 + 最低 24 分，即满足所有新西兰大学的 University Entrance。在新西兰境内就读还需满足读写（英语 Language A 的 HL/SL，或英语 Language B 的 HL）与算术（任一数学）。"
+  },
+  "universities": {
+    "title": "新西兰大学",
+    "minPoints": "IB {{points}} 分",
+    "note": "24 分 + 完整文凭只是入学门槛。医学、工程、法律等具体专业另有更高分数、科目与面试要求——务必查看该校官网。"
+  },
+  "schools": {
+    "title": "开设 IB 的学校",
+    "verifyHint": "学校会开设或停办项目，本列表可能过时。",
+    "directory": "Find an IB World School 官方目录",
+    "city": "城市",
+    "programme": "项目",
+    "all": "全部"
+  }
+}

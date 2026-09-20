@@ -1,0 +1,26 @@
+{
+  "title": "Glossary & parent FAQ",
+  "lead": "HL, SL, TOK, EE, CAS, AA, AI, diploma vs course results - in plain language.",
+  "search": "Search terms and questions",
+  "termsTitle": "Terms",
+  "faqTitle": "Parent FAQ",
+  "noResults": "Nothing matches that search.",
+  "terms": {
+    "hl-sl": { "term": "HL / SL", "body": "Higher Level and Standard Level. A diploma has 3 or 4 HL subjects and the rest at SL; HL means more teaching hours and more depth." },
+    "tok": { "term": "TOK", "body": "Theory of Knowledge: a core course about how knowledge is built. Graded A-E." },
+    "ee": { "term": "EE", "body": "Extended Essay: an independent research essay in a subject of the student's choice. Graded A-E." },
+    "cas": { "term": "CAS", "body": "Creativity, Activity, Service: the non-graded core strand that must still be completed." },
+    "aa-ai": { "term": "Mathematics AA / AI", "body": "Analysis and Approaches leans to pure mathematics and proof; Applications and Interpretation leans to modelling and real-world data. Each comes at HL and SL." },
+    "diploma-vs-course": { "term": "Diploma vs course results", "body": "A student who does not meet the diploma conditions can still receive certificates for individual subjects (course results). It is a different outcome from the full diploma." },
+    "ue": { "term": "UE (University Entrance)", "body": "New Zealand's minimum entry standard for university. For IB students it is a full diploma with at least 24 points, plus literacy and numeracy if studying in New Zealand." },
+    "myp-dp": { "term": "MYP / DP", "body": "The Middle Years Programme runs roughly Years 6-10; the Diploma Programme is Years 11-12. Subject choice for the DP is made in Year 10." }
+  },
+  "faq": {
+    "when-to-choose": { "q": "When do we actually choose subjects?", "a": "In Year 10, the final MYP year. That is why this tool focuses on that decision." },
+    "how-many-hl": { "q": "How many HL subjects are required?", "a": "Three or four; the remaining subjects are SL, six in total." },
+    "can-change": { "q": "Can subjects be changed after DP1 starts?", "a": "Sometimes early in DP1, but it gets harder quickly and depends on timetabling. Ask the IB coordinator immediately if you are considering it." },
+    "what-if-fail": { "q": "What happens if the diploma conditions are not met?", "a": "The student can still receive course results for individual subjects. Talk to the school about what that means for the applications you have in mind." },
+    "which-math": { "q": "AA or AI - which one?", "a": "It depends on the target programmes. Most STEM and economics degrees expect AA. Check the requirements of each programme you are considering." },
+    "nz-vs-overseas": { "q": "Does this plan work for overseas universities too?", "a": "The diploma structure is the same, but each country and university sets its own requirements. Use the pathway match as a starting point and verify on each university's own page." }
+  }
+}

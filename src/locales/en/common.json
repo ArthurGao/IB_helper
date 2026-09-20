@@ -1,0 +1,41 @@
+{
+  "appName": "IB Subject Selector",
+  "appTagline": "Understand, simulate and check your child's IB Diploma subject choices.",
+  "nav": {
+    "home": "Home",
+    "learn": "Learn IB",
+    "considerations": "Things to consider",
+    "selector": "Subject selector",
+    "compare": "Compare plans",
+    "nz": "New Zealand",
+    "glossary": "Glossary & FAQ",
+    "updates": "Curriculum updates"
+  },
+  "language": {
+    "label": "Language",
+    "zh": "中文",
+    "en": "English"
+  },
+  "theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "disclaimer": {
+    "title": "Important",
+    "body": "This tool is for family planning only and is not admissions or course advice. IB structure, assessment and failing conditions follow the current official documents of the International Baccalaureate Organization (ibo.org); university and programme requirements follow each university's own website; the subjects and programmes a school offers follow the school and the official IB \"Find an IB World School\" directory. Always talk to your school's IB coordinator before choosing subjects."
+  },
+  "data": {
+    "lastVerified": "Last verified: {{date}}",
+    "source": "Source",
+    "unverified": "To be verified"
+  },
+  "status": {
+    "comingSoon": "Coming in a later milestone."
+  },
+  "skipToContent": "Skip to main content",
+  "home": {
+    "timeline": "From Year 9 to the diploma",
+    "scoring": "6 subjects x 7 points + up to 3 core points = {{max}} maximum, {{pass}} to pass."
+  }
+}

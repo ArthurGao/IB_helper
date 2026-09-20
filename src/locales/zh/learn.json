@@ -1,0 +1,87 @@
+{
+  "title": "IB 是怎么连起来的",
+  "lead": "PYP → MYP → DP：每个阶段发生什么、六大学科组、Core 三件套，以及分数怎么来。",
+  "timeline": {
+    "title": "9 到 12 年级",
+    "y9": {
+      "title": "9 年级 — MYP 第 4 年",
+      "body": "还不分 HL/SL。打基础的一年：养成学习习惯，把语言与数学稳住。"
+    },
+    "y10": {
+      "title": "10 年级 — MYP 第 5 年",
+      "body": "做 Personal Project，同时也是真正决定 DP 选课的一年——本工具在这一年最有用。"
+    },
+    "y11": {
+      "title": "11 年级 — DP1",
+      "body": "6 门课全面铺开，同时启动 TOK、EE 与 CAS。"
+    },
+    "y12": {
+      "title": "12 年级 — DP2",
+      "body": "完成 EE 与 CAS；参加 5 月统考。"
+    }
+  },
+  "groups": {
+    "title": "六大学科组",
+    "showSubjects": "展开本工具收录的 {{count}} 门科目"
+  },
+  "core": {
+    "title": "Core 三件套：TOK、EE、CAS",
+    "tok": {
+      "title": "TOK（知识论）",
+      "body": "讨论「我们如何知道我们所知」的课程。评 A–E，与 EE 合计最多贡献 3 分附加分。"
+    },
+    "ee": {
+      "title": "EE（拓展论文）",
+      "body": "一篇独立研究论文。评 A–E，与 TOK 合计最多贡献 3 分附加分。"
+    },
+    "cas": {
+      "title": "CAS（创造、行动、服务）",
+      "body": "不计分，但必须完成——CAS 未完成则不予文凭。"
+    }
+  },
+  "scoring": {
+    "title": "评分",
+    "body": "6 门 × 7 分 = 42 分，加上 TOK 与 EE 最多 3 分：满分 {{max}}，及格 {{pass}}。",
+    "source": "阈值来自 diploma-rules.json（最后核实 {{date}}），目前仍标记为待与 IB 官方文件核实。"
+  },
+  "considerations": {
+    "title": "选课前要想清楚的事",
+    "lead": "工作量、语言选择、数学 AA vs AI、如何保持更多方向开放。",
+    "search": "搜索卡片",
+    "noResults": "没有匹配的卡片。"
+  },
+  "cards": {
+    "math-aa-vs-ai": {
+      "title": "数学选 AA 还是 AI？",
+      "body": "AA 偏纯数与证明，AI 偏建模与应用。多数工程、计算机、理科与经济专业要求 AA——决定前请逐个查看目标专业官网。"
+    },
+    "language-choice": {
+      "title": "Group 1 该放哪门语言？",
+      "body": "Group 1 是孩子的最强语言，Group 2 是第二语言。如果英语不是最强语言，把母语放 Group 1 往往更稳。注意新西兰 UE 读写需要英语 Language A（HL/SL）或英语 Language B（HL）。"
+    },
+    "hl-workload": {
+      "title": "三门 HL 有多重？",
+      "body": "HL 最少 3 门、最多 4 门。三门都很重（例如数学 AA + 物理 + 化学）确实吃力，请结合孩子的其它安排权衡。"
+    },
+    "keep-doors-open": {
+      "title": "保持方向开放",
+      "body": "方向未定时，含 HL 数学的均衡组合能保留最多可能。把理科或数学都放成非 HL，后面可能直接关掉医学与工程的门。"
+    },
+    "group6-swap": {
+      "title": "Group 6 的替换规则",
+      "body": "艺术科目可以用 Group 1–4 的第二门替换。还有跨学科科目：ESS 同时满足 Group 3 与 4，Literature and Performance 同时满足 Group 1 与 6。"
+    },
+    "school-offer": {
+      "title": "学校到底开哪些课",
+      "body": "IB 课程里有这门课，不代表你们学校开；排课冲突也可能让合法组合无法实现。请与学校 IB 协调员确认。"
+    },
+    "ee-cas-timing": {
+      "title": "EE 与 CAS 的时间点",
+      "body": "EE 通常在 DP1 选题、DP2 完成；CAS 贯穿两年，必须完成才能拿到文凭。"
+    },
+    "changing-later": {
+      "title": "以后还能换课吗",
+      "body": "DP1 早期还有机会调整，之后越来越难——这正是 10 年级那次决定如此关键的原因。越早找 IB 协调员沟通越好。"
+    }
+  }
+}
