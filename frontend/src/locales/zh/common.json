@@ -9,7 +9,8 @@
     "compare": "方案对比",
     "nz": "新西兰专区",
     "glossary": "术语与 FAQ",
-    "updates": "课程改革"
+    "updates": "课程改革",
+    "ncea": "NCEA"
   },
   "language": {
     "label": "语言",
@@ -37,5 +38,19 @@
   "home": {
     "timeline": "从 9 年级到拿到文凭",
     "scoring": "6 门 × 7 分 + Core 最多 3 分 = 满分 {{max}}，及格 {{pass}}。"
+  },
+  "entry": {
+    "ib": {
+      "title": "IB 文凭",
+      "body": "组建 6 门 IB 方案，实时校验文凭条件与新西兰大学入学要求。"
+    },
+    "ncea": {
+      "title": "NCEA",
+      "body": "新西兰本地学历：怎么运作、UE 检查，以及改革带来的变化。"
+    },
+    "which": {
+      "title": "我该给孩子选哪个？",
+      "body": "就家长真正关心的维度，中立并排对比 IB 与 NCEA。"
+    }
   }
 }

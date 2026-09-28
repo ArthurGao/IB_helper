@@ -1,0 +1,50 @@
+{
+  "lastVerified": "2026-09-29",
+  "sourceUrl": "https://www2.nzqa.govt.nz/ncea/understanding-secondary-quals/university-entrance/",
+  "_verify": {
+    "status": "verified",
+    "sourceUrl": "https://www2.nzqa.govt.nz/ncea/understanding-secondary-quals/university-entrance/",
+    "note": {
+      "en": "Verified 2026-09-29 against the NZQA University Entrance page. All four parts are required; missing any one means no UE. Universities and individual programmes set additional rank-score and subject requirements on top of UE - always link to their own pages.",
+      "zh": "2026-09-29 对照 NZQA University Entrance 页面核实。四项缺一不可。各大学与各专业在 UE 之上另有 rank score 与指定科目要求，一律链接其官网。"
+    }
+  },
+  "approvedSubjectCount": 3,
+  "approvedSubjectCredits": 14,
+  "literacy": { "credits": 10, "minReading": 5, "minWriting": 5, "minLevel": 2 },
+  "numeracy": { "credits": 10, "minLevel": 1 },
+  "requirements": [
+    {
+      "id": "ncea-level-3",
+      "label": { "en": "NCEA Level 3", "zh": "取得 NCEA Level 3" },
+      "rule": {
+        "en": "NCEA Level 3 must be awarded.",
+        "zh": "必须已取得 NCEA Level 3。"
+      }
+    },
+    {
+      "id": "approved-subjects",
+      "label": { "en": "Three approved subjects", "zh": "三门认可科目" },
+      "rule": {
+        "en": "14 credits at Level 3 in each of 3 approved subjects.",
+        "zh": "三门 UE 认可科目，每门在 Level 3 各取得 14 学分。"
+      }
+    },
+    {
+      "id": "ue-literacy",
+      "label": { "en": "UE literacy", "zh": "UE 读写" },
+      "rule": {
+        "en": "10 literacy credits at Level 2 or above: 5 in reading and 5 in writing.",
+        "zh": "Level 2 或以上的 10 个读写学分：阅读 5 + 写作 5。"
+      }
+    },
+    {
+      "id": "ue-numeracy",
+      "label": { "en": "UE numeracy", "zh": "UE 算术" },
+      "rule": {
+        "en": "10 numeracy credits at Level 1 or above.",
+        "zh": "Level 1 或以上的 10 个算术学分。"
+      }
+    }
+  ]
+}

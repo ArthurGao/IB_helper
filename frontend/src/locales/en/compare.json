@@ -11,5 +11,13 @@
   "warnings": "Warnings",
   "delete": "Delete plan",
   "yes": "Yes",
-  "no": "No"
+  "no": "No",
+  "plansTitle": "Your saved IB plans",
+  "systems": {
+    "title": "IB vs NCEA",
+    "lead": "A neutral side-by-side on what parents actually weigh up. This does not tell you which to choose - your school is best placed to advise.",
+    "ib": "IB Diploma",
+    "ncea": "NCEA",
+    "note": "Drawn from the verified data in this tool. There is no official IB-versus-NCEA comparison."
+  }
 }

@@ -1,0 +1,129 @@
+{
+  "title": "NCEA",
+  "lead": "新西兰本地学历体系：现在怎么运作、能否满足大学入学要求（UE），以及改革对你孩子意味着什么。",
+  "reformBanner": "NCEA 正在改革，替代资格的设计尚未最终确定，下方标注的内容仍可能变动——请以 education.govt.nz 的最新公告为准。",
+  "nav": {
+    "howItWorks": "NCEA 怎么运作",
+    "university": "UE 大学入学检查",
+    "calculator": "学分与背书估算",
+    "changes": "在改什么",
+    "whichOne": "我的孩子考哪一套？"
+  },
+  "howItWorks": {
+    "title": "NCEA 怎么运作",
+    "lead": "三个等级、学分制，以及一道对各级都适用的读写/算术闸门。",
+    "levelsTitle": "三个等级",
+    "typicalYear": "通常对应 Year {{year}}",
+    "credits": "学分",
+    "coRequisiteTitle": "读写与算术 co-requisite",
+    "coRequisiteBadge": "独立于 60 学分之外",
+    "gradesTitle": "标准怎么评分",
+    "grades": {
+      "notAchieved": {
+        "label": "Not Achieved（N）",
+        "body": "未达到该标准，不获得学分。"
+      },
+      "achieved": {
+        "label": "Achieved（A）",
+        "body": "达到标准，获得学分。"
+      },
+      "merit": {
+        "label": "Merit（M）",
+        "body": "达到标准且理解深入，计入背书。"
+      },
+      "excellence": {
+        "label": "Excellence（E）",
+        "body": "达到标准且理解全面，计入背书。"
+      }
+    },
+    "endorsementTitle": "背书（Endorsement）",
+    "certificateEndorsement": {
+      "title": "证书背书",
+      "body": "50 个 Merit（或 Merit 与 Excellence 合计）学分可获 Merit 背书；50 个 Excellence 学分可获 Excellence 背书。学分须在该证书等级或以上。"
+    },
+    "courseEndorsement": {
+      "title": "科目背书",
+      "body": "同一学年内：14 个或以上 Achieved / Merit / Excellence 学分，且其中外部评估 ≥3 学分、内部评估 ≥3 学分。部分没有外部评估的科目有豁免。"
+    }
+  },
+  "university": {
+    "title": "UE 大学入学检查",
+    "lead": "UE 由四项组成，缺一不可。填入孩子的预计学分，四项实时亮灯。",
+    "resultTitle": "大学入学（UE）",
+    "met": "已满足 UE",
+    "notMet": "未满足 UE",
+    "ok": "满足",
+    "missing": "缺",
+    "gap": "还差 {{gap}}",
+    "level3Title": "NCEA Level 3",
+    "level3Checkbox": "已取得（或预计取得）NCEA Level 3",
+    "literacyTitle": "UE 读写与算术学分",
+    "reading": "阅读",
+    "writing": "写作",
+    "numeracy": "算术",
+    "minCredits": "至少 {{n}}",
+    "subjectsTitle": "Level 3 认可科目",
+    "subjectsHint": "需要 {{count}} 门认可科目，每门 {{credits}} 个 Level 3 学分。只有 NZQA 认可科目才算数。",
+    "addSubject": "添加认可科目",
+    "add": "添加",
+    "remove": "删除",
+    "l3Credits": "L3 学分",
+    "noSubjects": "还没有添加科目。",
+    "beyondUe": "UE 只是最低门槛。各大学与各专业另有 rank score 与指定科目要求，请查看其官网。"
+  },
+  "calculator": {
+    "title": "学分与背书估算",
+    "lead": "估算某一级是否达标、能拿到哪一档背书。这是估算，不是官方成绩。",
+    "estimateOnly": "这是根据你填写的内容做的估算，正式成绩以 NZQA 为准。",
+    "levelTabs": "NCEA 等级",
+    "resultTitle": "估算结果",
+    "awarded": "可获得该级",
+    "notYet": "尚未达标",
+    "creditsRow": "该级或以上至少 {{required}} 学分",
+    "coRequisiteRow": "Co-requisite：读写 {{literacy}} + 算术 {{numeracy}} 学分",
+    "certificateEndorsement": "证书背书",
+    "subjectEndorsements": "科目背书",
+    "endorsement": {
+      "none": "无",
+      "achieved": "Achieved",
+      "merit": "Merit",
+      "excellence": "Excellence"
+    },
+    "endorsementHint": "科目背书需 14 学分且内部、外部各至少 3 学分。内/外学分留空时本工具不给背书，因此估算偏保守。",
+    "subjectsTitle": "该等级的科目",
+    "subjectPlaceholder": "科目名称或代码",
+    "credits": "学分",
+    "meritCredits": "Merit/Excellence",
+    "internalCredits": "内部评估",
+    "externalCredits": "外部评估",
+    "noSubjects": "该等级还没有添加科目。"
+  },
+  "changes": {
+    "title": "在改什么",
+    "lead": "NCEA 将被新资格分阶段取代。时间与设计尚未定稿。",
+    "timelineTitle": "时间线",
+    "qualificationsTitle": "新的资格",
+    "affectsYear": "影响 Year {{year}}",
+    "forYear": "对应 Year {{year}}",
+    "assessment": "评估方式",
+    "grading": "评分标尺",
+    "subjectRules": "科目数与通过规则",
+    "subjectRuleValue": "至少 {{min}} 门，通过至少 {{pass}} 门",
+    "notPublished": "教育部尚未公布。",
+    "status": {
+      "confirmed": "已确定",
+      "proposed": "已公布（细节待定）",
+      "tbc": "待确认"
+    }
+  },
+  "whichOne": {
+    "title": "我的孩子考哪一套？",
+    "lead": "填入当前年级，我们按官方公布的时间线逐年推算。",
+    "yearLevel": "孩子当前年级",
+    "year": "Year {{year}}",
+    "calendarYear": "当前年份",
+    "pickYearLevel": "选择年级后即可看到逐年路径。",
+    "noQualification": "这一年不考高中学历"
+  },
+  "disclaimer": "本工具仅供家庭规划参考，不构成升学建议。现行 NCEA 与 UE 要求以 NZQA 及各大学官网为准。NCEA 正在改革，替代资格（Foundational Award / NZCE / NZACE）的设计仍在最终确定，细节可能变动，请以 education.govt.nz 最新公告为准。请咨询学校的升学/学业指导老师。"
+}

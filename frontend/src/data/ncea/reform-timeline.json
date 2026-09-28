@@ -1,0 +1,41 @@
+{
+  "lastVerified": "2026-09-29",
+  "sourceUrl": "https://www.education.govt.nz/parents-and-caregivers/schools-year-0-13/parent-portal/new-qualification-years-11-13",
+  "_verify": {
+    "status": "verified",
+    "sourceUrl": "https://www.education.govt.nz/parents-and-caregivers/schools-year-0-13/parent-portal/new-qualification-years-11-13",
+    "note": {
+      "en": "Start years verified 2026-09-29 against the Ministry of Education parent portal: 'the foundational award will start in 2028', 'NZCE (Year 12) will begin in 2029', 'NZACE (Year 13) will begin in 2030', and ncea.education.govt.nz: 'From 2028, NCEA will be replaced with two new national qualifications'. The design itself is NOT final - the Ministry's own update says key details sit in 'Tranche 2' and are still being developed, so anything beyond these dates is marked proposed or tbc.",
+      "zh": "起始年份于 2026-09-29 对照教育部家长门户核实：「the foundational award will start in 2028」「NZCE (Year 12) will begin in 2029」「NZACE (Year 13) will begin in 2030」，以及 ncea.education.govt.nz 的「From 2028, NCEA will be replaced with two new national qualifications」。但设计本身**尚未定稿**——教育部自己的更新说明关键细节属于「Tranche 2」、仍在制定中，因此这些日期之外的内容一律标 proposed 或 tbc。"
+    }
+  },
+  "milestones": [
+    {
+      "year": 2028,
+      "affectsYearLevel": 11,
+      "status": "confirmed",
+      "event": {
+        "en": "Year 11 students are the first to take the Foundational Award (literacy and numeracy, benchmarked at Year 11). From 2028 NCEA is replaced by the new qualifications.",
+        "zh": "Year 11 学生首批参加 Foundational Award（读写与算术，对标 Year 11 水平）。2028 年起 NCEA 由新资格取代。"
+      }
+    },
+    {
+      "year": 2029,
+      "affectsYearLevel": 12,
+      "status": "confirmed",
+      "event": {
+        "en": "Year 12 students are the first to take the New Zealand Certificate of Education (NZCE).",
+        "zh": "Year 12 学生首批参加 New Zealand Certificate of Education（NZCE）。"
+      }
+    },
+    {
+      "year": 2030,
+      "affectsYearLevel": 13,
+      "status": "confirmed",
+      "event": {
+        "en": "Year 13 students are the first to take the New Zealand Advanced Certificate of Education (NZACE).",
+        "zh": "Year 13 学生首批参加 New Zealand Advanced Certificate of Education（NZACE）。"
+      }
+    }
+  ]
+}

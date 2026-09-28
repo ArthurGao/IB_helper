@@ -1,0 +1,65 @@
+{
+  "lastVerified": "2026-09-29",
+  "sourceUrl": "https://ncea.education.govt.nz/whats-new/further-details-new-senior-secondary-qualifications",
+  "_verify": {
+    "status": "unverified",
+    "sourceUrl": "https://ncea.education.govt.nz/whats-new/further-details-new-senior-secondary-qualifications",
+    "note": {
+      "en": "TODO verify: only the names, year levels and start years are published. As at 2026-09-29 the Ministry has NOT published the number of subjects, the pass rule, the grading scale, or the assessment split - its own update puts these in 'Tranche 2, still being developed'. The project spec suggested '>=5 subjects, pass >=3, A+ to E with C a pass'; those numbers are NOT in any official source found, so they are recorded as null with status tbc rather than copied in. Do not fill them from the spec.",
+      "zh": "待核实：官方目前只公布了名称、对应年级与起始年份。截至 2026-09-29，教育部**尚未公布**科目数量、通过规则、评分标尺与评估构成——其更新说明称这些属于「Tranche 2，仍在制定」。项目规格提出的「每年 ≥5 门、通过 ≥3 门、A+–E 且 C 及以上通过」在已查到的官方来源中**均无出处**，因此记为 null + status tbc，不予照抄。"
+    }
+  },
+  "qualifications": [
+    {
+      "id": "foundational",
+      "name": { "en": "Foundational Award", "zh": "Foundational Award（基础证书）" },
+      "replacesLevel": 1,
+      "yearLevel": 11,
+      "minSubjects": null,
+      "minSubjectsToPass": null,
+      "gradingScale": {
+        "en": "Not published yet.",
+        "zh": "官方尚未公布。"
+      },
+      "assessment": {
+        "en": "Recognises literacy and numeracy benchmarked at the Year 11 curriculum level. Further detail not published.",
+        "zh": "认定对标 Year 11 课程水平的读写与算术能力。更多细节官方尚未公布。"
+      },
+      "status": "proposed",
+      "sourceUrl": "https://www.education.govt.nz/parents-and-caregivers/schools-year-0-13/parent-portal/new-qualification-years-11-13",
+      "lastVerified": "2026-09-29"
+    },
+    {
+      "id": "nzce",
+      "name": { "en": "New Zealand Certificate of Education (NZCE)", "zh": "新西兰教育证书（NZCE）" },
+      "replacesLevel": 2,
+      "yearLevel": 12,
+      "minSubjects": null,
+      "minSubjectsToPass": null,
+      "gradingScale": { "en": "Not published yet.", "zh": "官方尚未公布。" },
+      "assessment": {
+        "en": "Subject-based rather than credit-accumulation. Assessment detail not published.",
+        "zh": "采用学科制而非学分累积。评估细节官方尚未公布。"
+      },
+      "status": "proposed",
+      "sourceUrl": "https://www.education.govt.nz/parents-and-caregivers/schools-year-0-13/parent-portal/new-qualification-years-11-13",
+      "lastVerified": "2026-09-29"
+    },
+    {
+      "id": "nzace",
+      "name": { "en": "New Zealand Advanced Certificate of Education (NZACE)", "zh": "新西兰高级教育证书（NZACE）" },
+      "replacesLevel": 3,
+      "yearLevel": 13,
+      "minSubjects": null,
+      "minSubjectsToPass": null,
+      "gradingScale": { "en": "Not published yet.", "zh": "官方尚未公布。" },
+      "assessment": {
+        "en": "Subject-based rather than credit-accumulation. Assessment detail not published.",
+        "zh": "采用学科制而非学分累积。评估细节官方尚未公布。"
+      },
+      "status": "proposed",
+      "sourceUrl": "https://www.education.govt.nz/parents-and-caregivers/schools-year-0-13/parent-portal/new-qualification-years-11-13",
+      "lastVerified": "2026-09-29"
+    }
+  ]
+}

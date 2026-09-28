@@ -1,0 +1,80 @@
+{
+  "lastVerified": "2026-09-29",
+  "sourceUrl": "https://www2.nzqa.govt.nz/ncea/about-ncea/ncea-levels-and-certificates/",
+  "_verify": {
+    "status": "unverified",
+    "sourceUrl": "https://www2.nzqa.govt.nz/ncea/about-ncea/ncea-levels-and-certificates/",
+    "note": {
+      "en": "Editorial summary, not an official comparison - no single authority compares IB with NCEA. Each cell is drawn from the two verified data sets in this repo (IB: frontend/src/data/*.json; NCEA: this directory). Written to be neutral: it must not tell a family which to choose.",
+      "zh": "这是编辑性归纳，不是官方对比——没有任何权威机构出具 IB 与 NCEA 的对照。每一格都取自本仓库已核实的两套数据（IB：frontend/src/data/*.json；NCEA：本目录）。行文保持中立，不替家庭下判断。"
+    }
+  },
+  "rows": [
+    {
+      "dimension": { "en": "Structure", "zh": "结构" },
+      "ib": {
+        "en": "Six subjects, 3-4 at Higher Level, plus TOK, the Extended Essay and CAS.",
+        "zh": "6 门课，其中 3–4 门 HL，外加 TOK、EE 与 CAS。"
+      },
+      "ncea": {
+        "en": "Credit accumulation: 60 credits at the level or above, plus a separate 20-credit literacy/numeracy co-requisite.",
+        "zh": "学分累积：该级或以上 60 学分，外加独立的 20 学分读写/算术 co-requisite。"
+      }
+    },
+    {
+      "dimension": { "en": "Grading", "zh": "评分" },
+      "ib": {
+        "en": "1-7 per subject, 45 points maximum, 24 to pass, with published failing conditions.",
+        "zh": "每门 1–7 分，满分 45、及格 24，并有公布的失败条件。"
+      },
+      "ncea": {
+        "en": "Per standard: Not Achieved / Achieved / Merit / Excellence. No overall score; endorsements recognise Merit and Excellence.",
+        "zh": "按标准评：Not Achieved / Achieved / Merit / Excellence。没有总分；用背书体现 Merit 与 Excellence。"
+      }
+    },
+    {
+      "dimension": { "en": "Flexibility", "zh": "灵活度" },
+      "ib": {
+        "en": "Fixed shape - one subject from each group, changes are hard once the programme starts.",
+        "zh": "结构固定——每组各一门，开课后调整困难。"
+      },
+      "ncea": {
+        "en": "Mix and match standards across subjects; credits can be built up across years.",
+        "zh": "可跨科目组合标准，学分可跨年累积。"
+      }
+    },
+    {
+      "dimension": { "en": "University Entrance (NZ)", "zh": "新西兰大学入学（UE）" },
+      "ib": {
+        "en": "Full diploma with at least 24 points, plus literacy and numeracy if studying in New Zealand.",
+        "zh": "完整文凭 + 至少 24 分；在新西兰境内就读另需满足读写与算术。"
+      },
+      "ncea": {
+        "en": "Four parts, all required: NCEA Level 3; 14 Level 3 credits in each of 3 approved subjects; 10 literacy credits at Level 2+; 10 numeracy credits at Level 1+.",
+        "zh": "四项缺一不可：取得 NCEA Level 3；三门认可科目各 14 个 Level 3 学分；Level 2+ 读写 10 学分；Level 1+ 算术 10 学分。"
+      }
+    },
+    {
+      "dimension": { "en": "Stability of the system", "zh": "制度稳定性" },
+      "ib": {
+        "en": "Subjects are revised on published cycles, but the diploma's shape is unchanged.",
+        "zh": "科目按公布的周期改版，但文凭的整体结构不变。"
+      },
+      "ncea": {
+        "en": "Being replaced in stages from 2028 by a Foundational Award, NZCE and NZACE. The design is still being finalised.",
+        "zh": "自 2028 年起被 Foundational Award、NZCE、NZACE 分阶段取代，设计仍在最终确定中。"
+      }
+    },
+    {
+      "dimension": { "en": "International recognition", "zh": "国际认可" },
+      "ib": {
+        "en": "Designed as an international qualification and widely recognised by universities abroad.",
+        "zh": "本身就是国际资格，海外大学广泛认可。"
+      },
+      "ncea": {
+        "en": "A New Zealand national qualification; NZQA publishes guidance on using it to apply overseas.",
+        "zh": "新西兰本国学历；NZQA 有专门指引说明如何用它申请海外院校。"
+      }
+    }
+  ]
+}

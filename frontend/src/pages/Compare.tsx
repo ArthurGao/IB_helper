@@ -5,6 +5,8 @@ import { useLocalized } from '../hooks/useLocalized'
 import { useSelectionStore, MAX_COMPARE } from '../store/selectionStore'
 import { displayTotal, evaluatePlan } from '../lib/evaluatePlan'
 import { StatusPill } from '../components/StatusPill'
+import { comparisonFile, comparisonRows } from '../data/ncea'
+import { ReformNotice } from '../components/ReformNotice'
 
 const byCode = new Map(subjects.map((s) => [s.code, s]))
 
@@ -37,6 +39,7 @@ function summarize(plan: Plan): Omit<Row, 'plan'> {
 
 export default function Compare() {
   const { t } = useTranslation('compare')
+  const { t: tc } = useTranslation()
   const { t: l } = useLocalized()
   const saved = useSelectionStore((s) => s.saved)
   const compareIds = useSelectionStore((s) => s.compareIds)
@@ -55,6 +58,47 @@ export default function Compare() {
           {t('lead', { max: MAX_COMPARE })}
         </p>
       </header>
+
+      {/* IB vs NCEA：中立并排，不替家庭下判断（增量规格 §4）。 */}
+      <div className="flex flex-col gap-3">
+        <h2 className="text-lg font-medium text-ink">{t('systems.title')}</h2>
+        <p className="max-w-2xl text-sm leading-relaxed text-ink-muted">{t('systems.lead')}</p>
+        <ReformNotice />
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[40rem] border-collapse text-sm">
+            <caption className="sr-only">{t('systems.title')}</caption>
+            <thead>
+              <tr>
+                <th scope="col" className="border-b border-border p-2 text-left text-ink-muted">
+                  {t('field')}
+                </th>
+                <th scope="col" className="border-b border-border p-2 text-left text-ink">
+                  {t('systems.ib')}
+                </th>
+                <th scope="col" className="border-b border-border p-2 text-left text-ink">
+                  {t('systems.ncea')}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparisonRows.map((row) => (
+                <tr key={row.dimension.en}>
+                  <th scope="row" className="p-2 text-left align-top text-ink-muted">
+                    {l(row.dimension)}
+                  </th>
+                  <td className="p-2 align-top leading-relaxed text-ink">{l(row.ib)}</td>
+                  <td className="p-2 align-top leading-relaxed text-ink">{l(row.ncea)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs leading-relaxed text-ink-muted">
+          {t('systems.note')} · {tc('data.lastVerified', { date: comparisonFile.lastVerified })}
+        </p>
+      </div>
+
+      <h2 className="text-lg font-medium text-ink">{t('plansTitle')}</h2>
 
       {saved.length === 0 ? (
         <p className="text-sm text-ink-muted">{t('empty')}</p>

@@ -1,0 +1,448 @@
+{
+  "lastVerified": "2026-09-29",
+  "sourceUrl": "https://www2.nzqa.govt.nz/ncea/understanding-secondary-quals/university-entrance/ue-subjects/",
+  "_verify": {
+    "status": "verified",
+    "sourceUrl": "https://www2.nzqa.govt.nz/ncea/understanding-secondary-quals/university-entrance/ue-subjects/",
+    "note": {
+      "en": "The 62 subject names were read from the NZQA 'List of approved University Entrance subjects' table on 2026-09-29. Only NZQA can add or remove a subject, so re-check before each school year. `code` is an app-internal slug, not an NZQA identifier. The Chinese names are translations for this tool's bilingual UI, not official NZQA names; Māori subject names are kept as-is.",
+      "zh": "62 个科目名称于 2026-09-29 读自 NZQA「List of approved University Entrance subjects」表格。科目增删由 NZQA 决定，每学年前需复核。`code` 是本应用内部 slug，非 NZQA 标识。中文名是为本工具双语界面所译，非官方名称；毛利语科目名保留原文。"
+    }
+  },
+  "subjects": [
+    {
+      "code": "accounting",
+      "name": {
+        "en": "Accounting",
+        "zh": "会计"
+      }
+    },
+    {
+      "code": "agriculture-and-horticulture",
+      "name": {
+        "en": "Agriculture and Horticulture",
+        "zh": "农业与园艺"
+      }
+    },
+    {
+      "code": "biology",
+      "name": {
+        "en": "Biology",
+        "zh": "生物"
+      }
+    },
+    {
+      "code": "business-studies",
+      "name": {
+        "en": "Business Studies",
+        "zh": "商业研究"
+      }
+    },
+    {
+      "code": "calculus",
+      "name": {
+        "en": "Calculus",
+        "zh": "微积分"
+      }
+    },
+    {
+      "code": "chemistry",
+      "name": {
+        "en": "Chemistry",
+        "zh": "化学"
+      }
+    },
+    {
+      "code": "chinese",
+      "name": {
+        "en": "Chinese",
+        "zh": "中文"
+      }
+    },
+    {
+      "code": "classical-studies",
+      "name": {
+        "en": "Classical Studies",
+        "zh": "古典学"
+      }
+    },
+    {
+      "code": "construction-and-mechanical-technologies",
+      "name": {
+        "en": "Construction and Mechanical Technologies",
+        "zh": "建造与机械技术"
+      }
+    },
+    {
+      "code": "cook-islands-maori",
+      "name": {
+        "en": "Cook Islands Maori",
+        "zh": "库克群岛毛利语"
+      }
+    },
+    {
+      "code": "dance",
+      "name": {
+        "en": "Dance",
+        "zh": "舞蹈"
+      }
+    },
+    {
+      "code": "design",
+      "name": {
+        "en": "Design (Practical Art)",
+        "zh": "设计（实践艺术）"
+      }
+    },
+    {
+      "code": "design-and-visual-communication",
+      "name": {
+        "en": "Design and Visual Communication",
+        "zh": "设计与视觉传达"
+      }
+    },
+    {
+      "code": "digital-technologies-and-hangarau-matihiko",
+      "name": {
+        "en": "Digital Technologies and Hangarau Matihiko",
+        "zh": "数字技术"
+      }
+    },
+    {
+      "code": "drama",
+      "name": {
+        "en": "Drama",
+        "zh": "戏剧"
+      }
+    },
+    {
+      "code": "earth-and-space-science",
+      "name": {
+        "en": "Earth and Space Science",
+        "zh": "地球与空间科学"
+      }
+    },
+    {
+      "code": "economics",
+      "name": {
+        "en": "Economics",
+        "zh": "经济学"
+      }
+    },
+    {
+      "code": "education-for-sustainability",
+      "name": {
+        "en": "Education for Sustainability",
+        "zh": "可持续发展教育"
+      }
+    },
+    {
+      "code": "english",
+      "name": {
+        "en": "English",
+        "zh": "英语"
+      }
+    },
+    {
+      "code": "french",
+      "name": {
+        "en": "French",
+        "zh": "法语"
+      }
+    },
+    {
+      "code": "geography",
+      "name": {
+        "en": "Geography",
+        "zh": "地理"
+      }
+    },
+    {
+      "code": "german",
+      "name": {
+        "en": "German",
+        "zh": "德语"
+      }
+    },
+    {
+      "code": "hangarau",
+      "name": {
+        "en": "Hangarau",
+        "zh": "Hangarau（毛利语技术）"
+      }
+    },
+    {
+      "code": "hauora",
+      "name": {
+        "en": "Hauora",
+        "zh": "Hauora（毛利语健康）"
+      }
+    },
+    {
+      "code": "health-education",
+      "name": {
+        "en": "Health Education",
+        "zh": "健康教育"
+      }
+    },
+    {
+      "code": "history",
+      "name": {
+        "en": "History",
+        "zh": "历史"
+      }
+    },
+    {
+      "code": "history-of-art",
+      "name": {
+        "en": "History of Art",
+        "zh": "艺术史"
+      }
+    },
+    {
+      "code": "home-economics",
+      "name": {
+        "en": "Home Economics",
+        "zh": "家政"
+      }
+    },
+    {
+      "code": "indonesian",
+      "name": {
+        "en": "Indonesian",
+        "zh": "印尼语"
+      }
+    },
+    {
+      "code": "japanese",
+      "name": {
+        "en": "Japanese",
+        "zh": "日语"
+      }
+    },
+    {
+      "code": "korean",
+      "name": {
+        "en": "Korean",
+        "zh": "韩语"
+      }
+    },
+    {
+      "code": "latin",
+      "name": {
+        "en": "Latin",
+        "zh": "拉丁语"
+      }
+    },
+    {
+      "code": "mathematics-pngarau",
+      "name": {
+        "en": "Mathematics/Pāngarau",
+        "zh": "数学"
+      }
+    },
+    {
+      "code": "media-studies",
+      "name": {
+        "en": "Media Studies",
+        "zh": "媒体研究"
+      }
+    },
+    {
+      "code": "music-studies",
+      "name": {
+        "en": "Music Studies",
+        "zh": "音乐研究"
+      }
+    },
+    {
+      "code": "new-zealand-sign-language",
+      "name": {
+        "en": "New Zealand Sign Language",
+        "zh": "新西兰手语"
+      }
+    },
+    {
+      "code": "ng-mahi-a-te-rhia",
+      "name": {
+        "en": "Ngā Mahi a te Rēhia",
+        "zh": "Ngā Mahi a te Rēhia"
+      }
+    },
+    {
+      "code": "ng-toi",
+      "name": {
+        "en": "Ngā Toi",
+        "zh": "Ngā Toi（毛利语艺术）"
+      }
+    },
+    {
+      "code": "ng-toi-ataata",
+      "name": {
+        "en": "Ngā Toi Ataata",
+        "zh": "Ngā Toi Ataata"
+      }
+    },
+    {
+      "code": "ng-toi-puoro",
+      "name": {
+        "en": "Ngā Toi Puoro",
+        "zh": "Ngā Toi Puoro"
+      }
+    },
+    {
+      "code": "pngarau",
+      "name": {
+        "en": "Pāngarau",
+        "zh": "Pāngarau（毛利语数学）"
+      }
+    },
+    {
+      "code": "painting",
+      "name": {
+        "en": "Painting (Practical Art)",
+        "zh": "绘画（实践艺术）"
+      }
+    },
+    {
+      "code": "photography",
+      "name": {
+        "en": "Photography (Practical Art)",
+        "zh": "摄影（实践艺术）"
+      }
+    },
+    {
+      "code": "physical-education",
+      "name": {
+        "en": "Physical Education",
+        "zh": "体育"
+      }
+    },
+    {
+      "code": "physics",
+      "name": {
+        "en": "Physics",
+        "zh": "物理"
+      }
+    },
+    {
+      "code": "printmaking",
+      "name": {
+        "en": "Printmaking (Practical Art)",
+        "zh": "版画（实践艺术）"
+      }
+    },
+    {
+      "code": "processing-technologies",
+      "name": {
+        "en": "Processing Technologies",
+        "zh": "加工技术"
+      }
+    },
+    {
+      "code": "psychology",
+      "name": {
+        "en": "Psychology",
+        "zh": "心理学"
+      }
+    },
+    {
+      "code": "ptaiao",
+      "name": {
+        "en": "Pūtaiao",
+        "zh": "Pūtaiao（毛利语科学）"
+      }
+    },
+    {
+      "code": "science-ptaiao",
+      "name": {
+        "en": "Science/Pūtaiao",
+        "zh": "科学"
+      }
+    },
+    {
+      "code": "religious-studies",
+      "name": {
+        "en": "Religious Studies",
+        "zh": "宗教研究"
+      }
+    },
+    {
+      "code": "samoan",
+      "name": {
+        "en": "Samoan",
+        "zh": "萨摩亚语"
+      }
+    },
+    {
+      "code": "sculpture",
+      "name": {
+        "en": "Sculpture (Practical Art)",
+        "zh": "雕塑（实践艺术）"
+      }
+    },
+    {
+      "code": "social-studies",
+      "name": {
+        "en": "Social Studies",
+        "zh": "社会研究"
+      }
+    },
+    {
+      "code": "spanish",
+      "name": {
+        "en": "Spanish",
+        "zh": "西班牙语"
+      }
+    },
+    {
+      "code": "statistics",
+      "name": {
+        "en": "Statistics",
+        "zh": "统计"
+      }
+    },
+    {
+      "code": "te-ao-haka",
+      "name": {
+        "en": "Te Ao Haka",
+        "zh": "Te Ao Haka"
+      }
+    },
+    {
+      "code": "technology-hangarau",
+      "name": {
+        "en": "Technology/Hangarau",
+        "zh": "技术"
+      }
+    },
+    {
+      "code": "te-reo-mori",
+      "name": {
+        "en": "Te Reo Māori",
+        "zh": "毛利语"
+      }
+    },
+    {
+      "code": "te-reo-rangatira",
+      "name": {
+        "en": "Te Reo Rangatira",
+        "zh": "Te Reo Rangatira"
+      }
+    },
+    {
+      "code": "tikanga-iwi",
+      "name": {
+        "en": "Tikanga ā-Iwi",
+        "zh": "Tikanga ā-Iwi"
+      }
+    },
+    {
+      "code": "tongan",
+      "name": {
+        "en": "Tongan",
+        "zh": "汤加语"
+      }
+    }
+  ]
+}

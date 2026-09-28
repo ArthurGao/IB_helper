@@ -16,20 +16,24 @@ IB 选课助手：帮助**家长**理解 IB 结构、模拟选课、校验文凭
 
 ```
 .
-├── frontend/          # 当前全部代码：Vite + React 18 + TS + Tailwind v4 + Vitest
+├── frontend/          # 全部前端代码：Vite + React 18 + TS + Tailwind v4 + Vitest
 │   ├── src/
-│   │   ├── data/      # IB 数据（JSON）—— 唯一事实来源
-│   │   ├── lib/       # 规则引擎、评估入口、分享、埋点（纯函数）
-│   │   ├── locales/   # i18n（en / zh）
-│   │   ├── components/ pages/ store/ hooks/ types/
-│   │   └── ...
+│   │   ├── data/          # IB 数据（JSON）—— 唯一事实来源
+│   │   ├── data/ncea/     # NCEA 数据，与 IB 数据并列、互不依赖
+│   │   ├── lib/           # IB 规则引擎、evaluatePlan、分享、埋点（纯函数）
+│   │   ├── lib/ncea-rules/# NCEA 规则引擎（纯函数）
+│   │   ├── lib/ai/        # AI 编排（Jev + LLM），默认关闭
+│   │   ├── config/        # ai.config.ts / llm-providers.ts
+│   │   ├── locales/       # i18n（en / zh）
+│   │   └── components/ pages/ store/ hooks/ types/
 │   └── package.json
-├── backend/           # 预留，目前只有 README；v1 不需要后端
+├── api/               # Vercel Functions：仅代理 AI 调用（放密钥），项目根是硬性要求
+├── backend/           # 非 Vercel Function 的服务端代码预留；目前为空
 ├── vercel.json        # 根级构建配置，产物为 frontend/dist
 └── package.json       # 根级脚本，全部代理到 frontend
 ```
 
-**在哪写代码**：一律在 `frontend/`。`backend/` 目前是空的，动它之前先读 `backend/README.md` 并与我确认技术栈。
+**在哪写代码**：UI 与规则一律在 `frontend/`；模型代理在 `api/`（改前先读 `backend/README.md` 里记的两个坑）。`backend/` 仍是空的，要往里写先与我确认技术栈。
 
 ## 硬性规则（不可违反）
 
@@ -42,7 +46,9 @@ IB 选课助手：帮助**家长**理解 IB 结构、模拟选课、校验文凭
 6. **不确定就说不确定。** 阈值未核实 → `indeterminate`；科目数不对或结构非法 → `incomplete`。**绝不**把「未核实」或「没选完」当成「通过」。
 7. **不把建议说成必需。** `pathways.json` 是通用选课参考，全部放 `recommendedHL`，`requiredHL` 留空；只有「具体大学 + 具体专业 + 入学年份」级别已核实的规则才配用 `requiredHL`。UI 措辞用 `meets / partial / not-met`，不用 open / closed。
 8. **i18n 无死角。** 所有面向用户的文案走 `frontend/src/locales/{en,zh}/*.json`，不硬编码中文或英文字符串。引擎返回 i18n key（`RuleMessage.id`），数据驱动的文案返回 JSON 里的双语 `msg`。中英 key 集合必须完全一致（有测试守）。
-9. **免责声明常驻。** 布局里固定展示规格第 15 节的双语免责声明。
+9. **免责声明常驻。** 布局按路由二选一：`/ncea/*` 显示 NCEA 版（强调制度在改），其余显示 IB 版。
+10. **增量以兄弟模块插入。** NCEA / AI 不改动 `ib-rules/`、`selectionStore`、现有 IB 页面与数据（增量规格红线 4）。
+11. **AI 永不拥有权威。** 能否文凭 / UE / 学分达标只由规则引擎判定；AI 默认关闭（`ai.config.ts` 的 `enabled`），关掉后 app 必须完整可用。密钥只在 `api/`，载荷无 PII。
 
 ## 代码规范
 
@@ -61,7 +67,8 @@ npm run test       # Vitest
 npm run lint       # oxlint
 npm run typecheck  # tsc -b
 npm run verify     # typecheck + lint + test + build，提交前跑这个
-npx vercel --prod  # 部署
+npx vercel --prod  # 部署（含 api/ 函数）
+vercel logs <url>  # 看 Function 运行时报错，排查 api/ 比猜快得多
 ```
 
 ## 工作流

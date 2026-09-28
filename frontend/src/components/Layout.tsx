@@ -1,6 +1,7 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Disclaimer } from './Disclaimer'
+import { NceaDisclaimer } from './NceaDisclaimer'
 import { LangSwitch } from './LangSwitch'
 import { ThemeToggle } from './ThemeToggle'
 
@@ -8,6 +9,7 @@ const NAV = [
   { to: '/', key: 'home', end: true },
   { to: '/learn', key: 'learn', end: false },
   { to: '/selector', key: 'selector', end: false },
+  { to: '/ncea', key: 'ncea', end: false },
   { to: '/compare', key: 'compare', end: false },
   { to: '/nz', key: 'nz', end: false },
   { to: '/updates', key: 'updates', end: false },
@@ -16,6 +18,9 @@ const NAV = [
 
 export function Layout() {
   const { t } = useTranslation()
+  // NCEA 与 IB 的免责声明内容不同（NCEA 要强调制度正在改革），按路由二选一——
+  // 两条同时出现会互相稀释，家长只会略过。
+  const isNcea = useLocation().pathname.startsWith('/ncea')
 
   return (
     <div className="min-h-dvh">
@@ -51,7 +56,7 @@ export function Layout() {
 
       <main id="main" tabIndex={-1} className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6">
         <Outlet />
-        <Disclaimer />
+        {isNcea ? <NceaDisclaimer /> : <Disclaimer />}
       </main>
     </div>
   )

@@ -1,0 +1,129 @@
+{
+  "title": "NCEA",
+  "lead": "New Zealand's national school qualification: how it works today, whether it meets University Entrance, and what the reform changes for your child.",
+  "reformBanner": "NCEA is being reformed. The replacement qualifications are still being finalised, so anything marked below can still change - check education.govt.nz for the latest.",
+  "nav": {
+    "howItWorks": "How NCEA works",
+    "university": "University Entrance check",
+    "calculator": "Credits & endorsement estimator",
+    "changes": "What is changing",
+    "whichOne": "Which qualification will my child sit?"
+  },
+  "howItWorks": {
+    "title": "How NCEA works",
+    "lead": "Three levels, a credit system, and a literacy/numeracy gate that applies to all of them.",
+    "levelsTitle": "The three levels",
+    "typicalYear": "Usually Year {{year}}",
+    "credits": "credits",
+    "coRequisiteTitle": "The literacy and numeracy co-requisite",
+    "coRequisiteBadge": "Separate from the 60",
+    "gradesTitle": "How standards are graded",
+    "grades": {
+      "notAchieved": {
+        "label": "Not Achieved (N)",
+        "body": "The standard was not met, so it earns no credits."
+      },
+      "achieved": {
+        "label": "Achieved (A)",
+        "body": "The standard was met. Credits are earned."
+      },
+      "merit": {
+        "label": "Merit (M)",
+        "body": "Met with in-depth understanding. Counts towards endorsements."
+      },
+      "excellence": {
+        "label": "Excellence (E)",
+        "body": "Met with comprehensive understanding. Counts towards endorsements."
+      }
+    },
+    "endorsementTitle": "Endorsements",
+    "certificateEndorsement": {
+      "title": "Certificate endorsement",
+      "body": "50 credits at Merit (or Merit and Excellence) endorses the certificate with Merit; 50 credits at Excellence endorses it with Excellence. The credits must be at the level of the certificate or above."
+    },
+    "courseEndorsement": {
+      "title": "Course endorsement",
+      "body": "In a single school year: 14 or more credits at Achieved, Merit or Excellence, including at least 3 from externally assessed standards and 3 from internally assessed standards. Some subjects without external standards are exempt."
+    }
+  },
+  "university": {
+    "title": "University Entrance check",
+    "lead": "UE has four parts and you need all four. Enter your child's expected credits and each one lights up.",
+    "resultTitle": "University Entrance",
+    "met": "UE met",
+    "notMet": "UE not met",
+    "ok": "Met",
+    "missing": "Missing",
+    "gap": "Short by {{gap}}",
+    "level3Title": "NCEA Level 3",
+    "level3Checkbox": "NCEA Level 3 has been (or is expected to be) awarded",
+    "literacyTitle": "UE literacy and numeracy credits",
+    "reading": "Reading",
+    "writing": "Writing",
+    "numeracy": "Numeracy",
+    "minCredits": "At least {{n}}",
+    "subjectsTitle": "Approved subjects at Level 3",
+    "subjectsHint": "You need {{count}} approved subjects with {{credits}} Level 3 credits each. Only NZQA-approved subjects count.",
+    "addSubject": "Add an approved subject",
+    "add": "Add",
+    "remove": "Remove",
+    "l3Credits": "L3 credits",
+    "noSubjects": "No subjects added yet.",
+    "beyondUe": "UE is the minimum. Individual universities and programmes set their own rank scores and required subjects - check their own pages."
+  },
+  "calculator": {
+    "title": "Credits & endorsement estimator",
+    "lead": "Estimate whether a level is met and which endorsement it would reach. An estimate, not an official result.",
+    "estimateOnly": "This is an estimate based on what you enter. Your official result comes from NZQA.",
+    "levelTabs": "NCEA level",
+    "resultTitle": "Estimated result",
+    "awarded": "Would be awarded",
+    "notYet": "Not yet",
+    "creditsRow": "At least {{required}} credits at this level or above",
+    "coRequisiteRow": "Co-requisite: {{literacy}} literacy + {{numeracy}} numeracy credits",
+    "certificateEndorsement": "Certificate endorsement",
+    "subjectEndorsements": "Course endorsements",
+    "endorsement": {
+      "none": "None",
+      "achieved": "Achieved",
+      "merit": "Merit",
+      "excellence": "Excellence"
+    },
+    "endorsementHint": "Course endorsement needs 14 credits plus at least 3 internal and 3 external. If you leave the internal/external split blank we do not award it, so this estimate is conservative.",
+    "subjectsTitle": "Subjects at this level",
+    "subjectPlaceholder": "Subject name or code",
+    "credits": "Credits",
+    "meritCredits": "Merit/Excellence",
+    "internalCredits": "Internal",
+    "externalCredits": "External",
+    "noSubjects": "No subjects added for this level yet."
+  },
+  "changes": {
+    "title": "What is changing",
+    "lead": "NCEA is being replaced in stages by new qualifications. Dates and design are not final.",
+    "timelineTitle": "Timeline",
+    "qualificationsTitle": "The new qualifications",
+    "affectsYear": "Affects Year {{year}}",
+    "forYear": "For Year {{year}}",
+    "assessment": "Assessment",
+    "grading": "Grading",
+    "subjectRules": "Subjects and passing",
+    "subjectRuleValue": "At least {{min}} subjects, pass at least {{pass}}",
+    "notPublished": "Not published by the Ministry yet.",
+    "status": {
+      "confirmed": "Confirmed",
+      "proposed": "Proposed",
+      "tbc": "To be confirmed"
+    }
+  },
+  "whichOne": {
+    "title": "Which qualification will my child sit?",
+    "lead": "Enter the current year level and we will work through the published timeline year by year.",
+    "yearLevel": "Your child's current year level",
+    "year": "Year {{year}}",
+    "calendarYear": "Current year",
+    "pickYearLevel": "Pick a year level to see the year-by-year path.",
+    "noQualification": "No senior qualification this year"
+  },
+  "disclaimer": "This tool is for family planning only and is not admissions advice. Current NCEA and UE requirements follow NZQA and each university's own website. NCEA is under reform and the replacement qualifications (Foundational Award / NZCE / NZACE) are still being finalised - follow education.govt.nz for the latest. Talk to your school's careers or academic adviser."
+}

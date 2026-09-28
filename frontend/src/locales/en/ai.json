@@ -1,0 +1,6 @@
+{
+  "disabled": "AI assistance is turned off. Everything on this page comes from the rule engine and the published data.",
+  "degraded": "AI assistance is unavailable right now, so this shows the rule-based result only.",
+  "authority": "Whether a combination is valid, meets the diploma requirements or meets University Entrance is always decided by the rule engine - never by a model.",
+  "privacy": "Only de-identified features are ever sent to an AI service. Names, dates of birth and schools are not."
+}

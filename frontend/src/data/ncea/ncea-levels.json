@@ -1,0 +1,95 @@
+{
+  "lastVerified": "2026-09-29",
+  "sourceUrl": "https://www2.nzqa.govt.nz/ncea/about-ncea/ncea-levels-and-certificates/",
+  "_verify": {
+    "status": "verified",
+    "sourceUrl": "https://www2.nzqa.govt.nz/ncea/about-ncea/ncea-levels-and-certificates/",
+    "note": {
+      "en": "Verified 2026-09-29 against NZQA 'NCEA levels and certificates'. Since 2024 each level needs 60 credits at that level or above, PLUS a separate 20-credit co-requisite (10 literacy + 10 numeracy) whose credits do NOT count towards the 60. Older sources still say '80 credits' - that was the pre-2024 rule (80 total, 60 at level + 20 carried) and is why the project spec flagged a 60/80 conflict. The co-requisite is met once and then counts for every level.",
+      "zh": "2026-09-29 对照 NZQA「NCEA levels and certificates」核实。2024 起每级需该级或以上的 60 学分，**另加**独立的 20 学分 co-requisite（读写 10 + 算术 10），其学分**不计入** 60。旧资料仍写「80 学分」——那是 2024 前的规则（共 80，其中 60 在本级 + 20 可来自低一级），这正是规格标注的 60/80 分歧来源。co-requisite 一次修得，对各级均有效。"
+    }
+  },
+  "levels": [
+    {
+      "level": 1,
+      "typicalYear": 11,
+      "creditsAtLevel": 60,
+      "carriedCreditsAllowed": 0,
+      "coRequisite": {
+        "literacy": 10,
+        "numeracy": 10,
+        "note": {
+          "en": "10 Literacy or Te Reo Matatini credits and 10 Numeracy or Te Pāngarau credits. Met once, then counts for every NCEA level. These credits cannot also count towards the 60.",
+          "zh": "读写（或 Te Reo Matatini）10 学分 + 算术（或 Te Pāngarau）10 学分。一次修得即对各级 NCEA 有效；这些学分不能再计入 60 学分。"
+        }
+      },
+      "name": { "en": "NCEA Level 1", "zh": "NCEA Level 1" },
+      "summary": {
+        "en": "60 credits at any level (1, 2 or 3), plus the 20-credit co-requisite.",
+        "zh": "任一等级（1、2 或 3）的 60 学分，外加 20 学分 co-requisite。"
+      },
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://www2.nzqa.govt.nz/ncea/about-ncea/ncea-levels-and-certificates/",
+        "note": {
+          "en": "Quote: '60 credits at any Level (1, 2 or 3)'. carriedCreditsAllowed is 0 because Level 1 has no level below it to carry from.",
+          "zh": "官方原文：「60 credits at any Level (1, 2 or 3)」。carriedCreditsAllowed 为 0，因为 Level 1 之下没有可结转的等级。"
+        }
+      }
+    },
+    {
+      "level": 2,
+      "typicalYear": 12,
+      "creditsAtLevel": 60,
+      "carriedCreditsAllowed": 0,
+      "coRequisite": {
+        "literacy": 10,
+        "numeracy": 10,
+        "note": {
+          "en": "Met once at any level; if already met for Level 1 it also counts here.",
+          "zh": "一次修得、各级通用；若在 Level 1 已满足，此处同样有效。"
+        }
+      },
+      "name": { "en": "NCEA Level 2", "zh": "NCEA Level 2" },
+      "summary": {
+        "en": "60 credits at Level 2 or above, plus the 20-credit co-requisite.",
+        "zh": "Level 2 或以上的 60 学分，外加 20 学分 co-requisite。"
+      },
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://www2.nzqa.govt.nz/ncea/about-ncea/ncea-levels-and-certificates/",
+        "note": {
+          "en": "Quote: '60 credits at Level 2 or above'. The pre-2024 '20 credits from a lower level' allowance is NOT part of the current 60-credit rule, so carriedCreditsAllowed is 0.",
+          "zh": "官方原文：「60 credits at Level 2 or above」。2024 前「可含 20 个低一级学分」的规定**不属于**现行 60 学分规则，故 carriedCreditsAllowed 为 0。"
+        }
+      }
+    },
+    {
+      "level": 3,
+      "typicalYear": 13,
+      "creditsAtLevel": 60,
+      "carriedCreditsAllowed": 0,
+      "coRequisite": {
+        "literacy": 10,
+        "numeracy": 10,
+        "note": {
+          "en": "Met once at any level; if already met earlier it also counts here.",
+          "zh": "一次修得、各级通用；若此前已满足，此处同样有效。"
+        }
+      },
+      "name": { "en": "NCEA Level 3", "zh": "NCEA Level 3" },
+      "summary": {
+        "en": "60 credits at Level 3 or above, plus the 20-credit co-requisite.",
+        "zh": "Level 3 或以上的 60 学分，外加 20 学分 co-requisite。"
+      },
+      "_verify": {
+        "status": "verified",
+        "sourceUrl": "https://www2.nzqa.govt.nz/ncea/about-ncea/ncea-levels-and-certificates/",
+        "note": {
+          "en": "Quote: '60 credits at Level 3 or above'.",
+          "zh": "官方原文：「60 credits at Level 3 or above」。"
+        }
+      }
+    }
+  ]
+}

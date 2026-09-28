@@ -9,7 +9,8 @@
     "compare": "Compare plans",
     "nz": "New Zealand",
     "glossary": "Glossary & FAQ",
-    "updates": "Curriculum updates"
+    "updates": "Curriculum updates",
+    "ncea": "NCEA"
   },
   "language": {
     "label": "Language",
@@ -37,5 +38,19 @@
   "home": {
     "timeline": "From Year 9 to the diploma",
     "scoring": "6 subjects x 7 points + up to 3 core points = {{max}} maximum, {{pass}} to pass."
+  },
+  "entry": {
+    "ib": {
+      "title": "IB Diploma",
+      "body": "Build and check a six-subject IB plan against the diploma conditions and NZ University Entrance."
+    },
+    "ncea": {
+      "title": "NCEA",
+      "body": "New Zealand's national qualification: how it works, the UE check, and what the reform changes."
+    },
+    "which": {
+      "title": "Which one for my child?",
+      "body": "A neutral side-by-side of IB and NCEA on the things parents actually weigh up."
+    }
   }
 }

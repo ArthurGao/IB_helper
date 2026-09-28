@@ -1,7 +1,23 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-const TERMS = ['hl-sl', 'tok', 'ee', 'cas', 'aa-ai', 'diploma-vs-course', 'ue', 'myp-dp'] as const
+const TERMS = [
+  'hl-sl',
+  'tok',
+  'ee',
+  'cas',
+  'aa-ai',
+  'diploma-vs-course',
+  'ue',
+  'myp-dp',
+  // NCEA 术语并入同一张表，家长不必在两页之间跳
+  'ncea',
+  'credits',
+  'co-requisite',
+  'endorsement',
+  'ue-ncea',
+  'new-quals',
+] as const
 const FAQS = ['when-to-choose', 'how-many-hl', 'can-change', 'what-if-fail', 'which-math', 'nz-vs-overseas'] as const
 
 export default function Glossary() {

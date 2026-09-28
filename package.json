@@ -2,6 +2,7 @@
   "name": "ib-helper",
   "private": true,
   "version": "0.1.0",
+  "type": "module",
   "description": "IB 选课助手 / IB Subject Selector for Parents - monorepo root",
   "scripts": {
     "dev": "npm --prefix frontend run dev",
@@ -9,8 +10,9 @@
     "preview": "npm --prefix frontend run preview",
     "test": "npm --prefix frontend run test",
     "lint": "npm --prefix frontend run lint",
-    "typecheck": "npm --prefix frontend run typecheck",
+    "typecheck": "npm --prefix frontend run typecheck && npm run typecheck:api",
     "install:all": "npm --prefix frontend install",
-    "verify": "npm run typecheck && npm run lint && npm run test && npm run build"
+    "verify": "npm run typecheck && npm run lint && npm run test && npm run build",
+    "typecheck:api": "./frontend/node_modules/.bin/tsc --noEmit -p api/tsconfig.json"
   }
 }

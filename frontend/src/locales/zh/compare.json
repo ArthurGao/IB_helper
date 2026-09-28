@@ -11,5 +11,13 @@
   "warnings": "警告数",
   "delete": "删除方案",
   "yes": "是",
-  "no": "否"
+  "no": "否",
+  "plansTitle": "你保存的 IB 方案",
+  "systems": {
+    "title": "IB 与 NCEA 对比",
+    "lead": "就家长真正关心的维度中立并排。这里不替你下判断——学校最了解你孩子的情况。",
+    "ib": "IB 文凭",
+    "ncea": "NCEA",
+    "note": "取自本工具已核实的数据。官方没有出具 IB 与 NCEA 的对照。"
+  }
 }

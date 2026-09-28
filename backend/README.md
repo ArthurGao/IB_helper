@@ -1,34 +1,42 @@
 # backend
 
-后端代码的预留位置。**目前为空，v1 不需要后端**——规格第 2 节明确「纯前端、无后端、无登录」，
-方案通过 `localStorage` 与 URL 分享承载（见 `frontend/src/lib/share.ts`）。
+**部署中的服务端代码在项目根目录的 `api/`**，不在这里——Vercel Functions 只识别项目根的
+`api/` 目录（[docs](https://vercel.com/docs/functions)）。本目录保留给将来**不适合放在 Vercel
+Function 里**的服务端代码（长驻进程、队列消费者、数据库迁移等）；目前为空。
 
-## 什么时候才应该往这里写代码
+## 现有服务端（`api/`）
 
-只有当某个需求**在纯前端做不到**时才引入后端。目前已知的候选（均来自规格第 10 节的「非目标」，
-要做需先确认）：
+| 端点 | 用途 | 状态 |
+|---|---|---|
+| `api/llm.ts` | 代理 LLM 调用（解释 / 答疑 / 摘要） | X1 空实现，返回 501 + `degraded:true`；X5 接入 Router |
+| `api/jev.ts` | 代理 Jev 调用（画像抽取 / 契合打分） | X1 空实现，返回 501 + `degraded:true`；X6 接入 |
 
-- 账户系统 / 跨设备同步方案
-- 服务端保存与分享（替代把方案塞进 URL）
-- IB 数据的集中更新与版本化（现在是 `frontend/src/data/*.json` 随前端一起发布）
-- 埋点上报（现在只写 `localStorage`，不出网）
+**它们存在的唯一理由是放密钥。** IB v1 是纯前端无后端；引入 AI 后模型密钥不能进浏览器，
+因此新增这两个代理。除此之外，NCEA 与 IB 仍是客户端数据驱动，延续 `localStorage` + URL 分享。
 
-## 开工前要先定的事
+## 两个已经踩过的坑（改 `api/` 前必读）
 
-技术栈**尚未选定**，不要默认某个框架。引入后端时需要先确定并记录：
+1. **签名必须是 `export default { fetch(request) }`**（或具名 `export function GET`）。写成裸的
+   `export default function handler(request)` 会被运行时当成旧式 `(req, res)` 处理器，
+   永远不调用 `res.end()`，请求挂死到超时——不是 500，是没有响应，很难从状态码看出来。
+2. **根 `package.json` 必须有 `"type": "module"`**。`api/*.ts` 编译出的是 ESM，没有这一行
+   Node 会按 CJS 加载并报 `SyntaxError: Unexpected token 'export'`。
 
-1. 语言与框架（Node/TS、Python 等）
-2. 数据存储（是否需要，以及什么类型）
-3. 与前端的契约（REST / 其它），以及类型如何共享
-4. 部署方式（当前前端是 Vercel 静态托管）
+排查手段：`vercel logs <deployment-url>` 能直接看到函数的运行时报错，比猜快得多。
 
-决定后：更新根目录 `CLAUDE.md` / `AGENTS.md` 的命令与目录说明，并在知识库
-`~/Docs/Knowledgebase/IB_helper/` 增加对应页面。
+## 硬性约束
 
-## 硬性约束（与前端一致）
+1. **规则判定绝不上服务端做第二份实现。** 唯一实现在 `frontend/src/lib/ib-rules/` 与
+   `frontend/src/lib/ncea-rules/`。服务端若需要同样的判定，抽成共享包复用，不要重写——
+   两份实现必然漂移。
+2. **无 PII 出域。** 发往任何模型的载荷只含去标识化的抽象字段，绝不含姓名、出生日期、学校。
+3. **密钥只从环境变量读**，配置文件里只写变量名（见 `frontend/src/config/llm-providers.ts`）。
+4. **强制降级。** 任一模型服务不可用，前端必须照常工作——端点返回 `degraded:true`，调用方走模板。
 
-- IB 规则、评分阈值、大学要求、学校列表一律来自已核实的数据，不凭记忆编造；
-  未核实的值标 `unverified` 并保留来源 URL。
-- 所有面向用户的文案双语（en / zh）。
-- 规则判定的唯一实现在 `frontend/src/lib/ib-rules/`；后端若需要同样的判定，
-  应复用同一套规则（抽成共享包），**不要**写第二份实现——两份实现必然漂移。
+## 环境变量（全部服务端）
+
+```
+AI_GATEWAY_API_KEY=     # Vercel AI Gateway 统一鉴权，覆盖 Jev 与各 LLM
+```
+
+配置文件只引用变量名；变量缺失时对应供应商视为不可用并降级。

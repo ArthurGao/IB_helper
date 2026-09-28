@@ -13,18 +13,22 @@ export default function Home() {
       <div className="flex flex-col gap-3">
         <h1 className="text-3xl font-semibold text-ink">{t('appName')}</h1>
         <p className="max-w-2xl leading-relaxed text-ink-muted">{t('appTagline')}</p>
-        <div className="flex flex-wrap gap-3">
+        {/* 三入口：IB / NCEA / 我该选哪个（增量规格 §1）。 */}
+        <div className="grid gap-3 sm:grid-cols-3">
           <Link
             to="/selector"
-            className="rounded-md bg-brand px-4 py-2 text-sm font-medium text-brand-ink"
+            className="rounded-lg border border-brand bg-brand/10 p-4 hover:border-brand"
           >
-            {t('nav.selector')}
+            <p className="font-medium text-ink">{t('entry.ib.title')}</p>
+            <p className="mt-1 text-sm leading-relaxed text-ink-muted">{t('entry.ib.body')}</p>
           </Link>
-          <Link
-            to="/learn"
-            className="rounded-md border border-border px-4 py-2 text-sm font-medium text-ink"
-          >
-            {t('nav.learn')}
+          <Link to="/ncea" className="rounded-lg border border-border p-4 hover:border-brand">
+            <p className="font-medium text-ink">{t('entry.ncea.title')}</p>
+            <p className="mt-1 text-sm leading-relaxed text-ink-muted">{t('entry.ncea.body')}</p>
+          </Link>
+          <Link to="/compare" className="rounded-lg border border-border p-4 hover:border-brand">
+            <p className="font-medium text-ink">{t('entry.which.title')}</p>
+            <p className="mt-1 text-sm leading-relaxed text-ink-muted">{t('entry.which.body')}</p>
           </Link>
         </div>
       </div>
