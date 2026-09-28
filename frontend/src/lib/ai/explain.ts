@@ -1,5 +1,5 @@
 import type { LLMMessage } from './types'
-import { redact } from './redact'
+import { redact, scrubValue } from './redact'
 
 /**
  * 「为什么」解释器的 grounding 层。
@@ -20,6 +20,9 @@ export const EXPLAIN_SYSTEM_PROMPT = [
   '4. Always end by pointing to the school and the official site for confirmation.',
   '5. Answer in the language requested, warmly and in plain words a parent can act on.',
 ].join('\n')
+
+/** 家长自由提问的长度上限：既控成本，也限制能塞进去的个人信息量。 */
+export const MAX_QUESTION_CHARS = 500
 
 /** 允许注入的字段白名单——发出去的只有这些。 */
 export const ALLOWED_FACT_KEYS = [
@@ -47,6 +50,11 @@ export interface ExplainInput {
 export function buildExplainMessages(input: ExplainInput): LLMMessage[] {
   const facts = redact(input.facts, ALLOWED_FACT_KEYS)
   const language = input.language === 'zh' ? 'Chinese (Simplified)' : 'English'
+  // 自由提问不能原样插进去：先截断再清洗掉能识别的身份标识。
+  // 人名（尤其中文名）无法可靠识别，所以 UI 必须提示家长不要写姓名。
+  const question = input.question
+    ? scrubValue(input.question.slice(0, MAX_QUESTION_CHARS))
+    : undefined
   return [
     { role: 'system', content: EXPLAIN_SYSTEM_PROMPT },
     {
@@ -55,7 +63,7 @@ export function buildExplainMessages(input: ExplainInput): LLMMessage[] {
         `Language: ${language}`,
         'FACTS (from the rule engine, authoritative):',
         JSON.stringify(facts),
-        input.question ? `Parent's question: ${input.question}` : 'Explain this result to the parent.',
+        question ? `Parent's question: ${question}` : 'Explain this result to the parent.',
       ].join('\n'),
     },
   ]

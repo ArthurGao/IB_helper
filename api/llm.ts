@@ -7,33 +7,67 @@
  * 签名必须是 `export default { fetch }`：裸的 `export default function handler(req)`
  * 会被运行时当成旧式 (req, res) 处理器，请求直接挂死（见 backend/README.md）。
  */
-import { GATEWAY_URL, KEY_ENV, containsPii, degraded, readJson } from './_shared.js'
+import { aiConfig, type LLMTask } from '../frontend/src/config/ai.config.js'
+import { LLM_PROVIDERS } from '../frontend/src/config/llm-providers.js'
+import {
+  GATEWAY_URL,
+  KEY_ENV,
+  checkMessageSize,
+  containsPii,
+  degraded,
+  originAllowed,
+  readJson,
+} from './_shared.js'
+
+interface LlmRequest {
+  task?: unknown
+  messages?: unknown
+}
+
+const TASKS: LLMTask[] = ['explain', 'qa', 'summarize', 'reform_narrative']
+
+function isTask(value: unknown): value is LLMTask {
+  return typeof value === 'string' && TASKS.includes(value as LLMTask)
+}
 
 /**
- * 供应商链由前端配置决定并随请求传入（`frontend/src/config/` 是唯一配置源），
- * 服务端只负责按顺序尝试并保管密钥——这样「改配置即切供应商」才成立。
+ * 供应商链在**服务端**从同一份配置推导。
+ *
+ * 这里刻意不接受客户端传模型名：这是个无鉴权的公开端点且持有计费密钥，
+ * 让调用方点名模型等于把账户开放给任何人跑任意（包括最贵的）模型，
+ * 同时会绕过 allowTrainsOnDataProviders 这道隐私门控——门控只在客户端执行
+ * 就等于没有门控。
  */
-interface LlmRequest {
-  models?: unknown
-  messages?: unknown
+function providerChain(task: LLMTask): string[] {
+  const profileId = aiConfig.llm.taskOverrides[task] ?? aiConfig.llm.activeProfile
+  const profile = aiConfig.llm.profiles[profileId]
+  return [profile.primary, ...profile.fallback]
+    .map((id) => LLM_PROVIDERS[id])
+    .filter((entry) => entry.trainsOnData === false || aiConfig.llm.allowTrainsOnDataProviders)
+    .map((entry) => entry.gatewayModel)
 }
 
 export default {
   async fetch(request: Request): Promise<Response> {
     if (request.method !== 'POST') return degraded('method-not-allowed', 405)
+    // 公开端点 + 计费密钥：先挡掉不是从本站发起的请求。
+    if (!originAllowed(request)) return degraded('origin-not-allowed', 403)
 
     const body = (await readJson(request)) as LlmRequest | null
-    if (!body || !Array.isArray(body.messages) || body.messages.length === 0) {
-      return degraded('bad-request', 400)
-    }
-    // 服务端最后一道闸门：前端脱敏失效时也不让 PII 出域。
-    // 刻意排在密钥检查之前——安全检查不该依赖是否配了密钥。
+    if (!body) return degraded('bad-request', 400)
+
+    const size = checkMessageSize(body.messages)
+    if (!size.ok) return degraded(size.reason ?? 'bad-request', 400)
+
+    // PII 闸门排在密钥检查之前：安全检查不该依赖是否配了密钥。
     if (containsPii(body.messages)) return degraded('payload-contains-pii', 400)
+
+    if (!isTask(body.task)) return degraded('unknown-task', 400)
 
     const apiKey = process.env[KEY_ENV]
     if (!apiKey) return degraded('missing-api-key')
 
-    const models = Array.isArray(body.models) ? body.models.filter((m) => typeof m === 'string') : []
+    const models = providerChain(body.task)
     if (models.length === 0) return degraded('no-provider-available')
 
     for (const model of models) {

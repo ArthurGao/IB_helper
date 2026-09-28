@@ -25,6 +25,8 @@ export async function fetchExplanation(
     const response = await fetchImpl(options.endpoint ?? '/api/llm', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
+      // 只发 task，不发模型名：模型链由服务端从同一份配置推导，
+      // 否则这个公开端点就成了任人点名模型的计费代理。
       body: JSON.stringify({
         task: options.task ?? 'explain',
         messages: buildExplainMessages(input),

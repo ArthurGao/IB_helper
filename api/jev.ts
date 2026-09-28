@@ -7,7 +7,16 @@
  *
  * 只对**已通过规则校验**的组合打分——能不能，永远由规则引擎说了算。
  */
-import { GATEWAY_URL, JEV_MODEL, KEY_ENV, containsPii, degraded, readJson } from './_shared.js'
+import {
+  GATEWAY_URL,
+  JEV_MODEL,
+  KEY_ENV,
+  MAX_MESSAGES,
+  containsPii,
+  degraded,
+  originAllowed,
+  readJson,
+} from './_shared.js'
 
 interface JevRequestBody {
   state?: unknown
@@ -17,13 +26,18 @@ interface JevRequestBody {
 export default {
   async fetch(request: Request): Promise<Response> {
     if (request.method !== 'POST') return degraded('method-not-allowed', 405)
+    if (!originAllowed(request)) return degraded('origin-not-allowed', 403)
 
     const body = (await readJson(request)) as JevRequestBody | null
     if (!body || !Array.isArray(body.questions) || body.questions.length === 0) {
       return degraded('bad-request', 400)
     }
+    if (body.questions.length > MAX_MESSAGES) return degraded('too-many-questions', 400)
+    // Jev 的模型 id 固定在服务端，客户端无法点名模型（同 llm.ts 的理由）。
     // PII 闸门排在密钥检查之前：安全检查不该依赖是否配了密钥。
-    if (containsPii(body.state)) return degraded('payload-contains-pii', 400)
+    if (containsPii(body.state) || containsPii(body.questions)) {
+      return degraded('payload-contains-pii', 400)
+    }
 
     const apiKey = process.env[KEY_ENV]
     if (!apiKey) return degraded('missing-api-key')
